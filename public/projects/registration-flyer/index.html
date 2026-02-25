@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBHN Conference Registration - Hidden Crises: Stress, Mental Health & Brain Health</title>
+    
+    <!-- Google Fonts - Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'shamrock': '#36c98a',
+                        'molten-orange': '#ff5a1f',
+                        'gold': '#ffd600',
+                        'sky': '#00c3f3',
+                        'deep-blue': '#003687',
+                        'magenta-bloom': '#fc0367',
+                        'cream': '#f9f6f2',
+                        'charcoal': '#23272a',
+                        'old-gold': '#b6b300',
+                    },
+                    fontFamily: {
+                        'sans': ['Open Sans', 'sans-serif'],
+                        'display': ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/styles/main.css">
+    
+    <style>
+        @page { size: A4; margin: 0; }
+        @media print {
+            html, body { margin: 0; padding: 0; background: none; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            .flyer-page { box-shadow: none !important; margin: 0 !important; }
+        }
+        .flyer-page {
+            width: 210mm;
+            height: 297mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 25px 100px -12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body class="font-sans text-charcoal bg-gray-200" style="margin:0;padding:0;">
+    
+    <!-- Registration Flyer - Single Page -->
+    <div class="flyer-page relative overflow-hidden">
+        
+        <!-- ============================================== -->
+        <!-- LAYERED BACKGROUND (Same as Cover) -->
+        <!-- ============================================== -->
+        <div class="absolute inset-0" style="background: linear-gradient(120deg, rgba(0,54,135,1) 0%, rgba(241,73,22,0.10) 100%);"></div>
+        <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] rounded-full" style="background: radial-gradient(circle, rgba(241,73,22,0.10) 0%, transparent 70%);"></div>
+        <div class="absolute top-1/3 -left-32 w-[300px] h-[300px] rounded-full" style="background: radial-gradient(circle, rgba(54,150,98,0.10) 0%, transparent 75%);"></div>
+        
+        <!-- Diagonal Pattern -->
+        <div class="absolute inset-0 opacity-[0.015]">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="diagonals" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="40" stroke="white" stroke-width="1"></line>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#diagonals)"></rect>
+            </svg>
+        </div>
+        
+        <!-- Decorative Elements -->
+        <div class="absolute top-16 right-16 w-32 h-32 rounded-full border border-white/15"></div>
+        <div class="absolute bottom-32 left-12 w-20 h-20 border border-shamrock/30 rounded-2xl rotate-12"></div>
+        <div class="absolute top-24 right-24 w-4 h-4 bg-molten-orange/60 rounded-full"></div>
+        <div class="absolute left-0 top-1/4 w-1 h-32" style="background: linear-gradient(to bottom, transparent, #ff5a1f 60%, transparent);"></div>
+        <div class="absolute inset-6 border border-gold/20 rounded-3xl pointer-events-none"></div>
+        
+        <!-- ============================================== -->
+        <!-- MAIN CONTENT -->
+        <!-- ============================================== -->
+        <div class="relative z-10 h-full flex flex-col">
+            
+            <!-- Hero Section with Background Image -->
+            <div class="mx-6 mt-3 rounded-2xl overflow-hidden relative p-5 pt-3" style="height: 450px;">
+                <!-- Background Image -->
+                <img src="/images/cbhn-image-background.png" alt="Black community members" class="absolute inset-0 w-full h-full object-cover object-center">
+                <!-- Dark Overlay -->
+                <div class="absolute inset-0" style="
+    background: linear-gradient(60deg, rgba(0,54,135,0.9) 30%, rgba(0,54,135,0.7) 50%, rgba(0,0,0,0) 80%);
+"></div>
+                
+                <div class="flex justify-between items-center">
+                    <div class="relative bg-gradient-to-br from-white/60 to-white/30 rounded-lg p-3 border border-white/25">
+                        <a href="https://yourcbhn.org/" target="_blank" rel="noopener">
+                            <img src="/images/cbhn-logo.png" alt="CBHN Logo" class="h-8 w-auto">
+                        </a>
+                    </div>
+                    
+                </div><!-- Two-Column Content: Title Left, Description Right -->
+                <div class="relative z-10 flex gap-4">
+                    
+                    <!-- LEFT: Title & Event Details -->
+                    <div class="flex-1 flex flex-col justify-center mt-5">
+                        <!-- Main Title -->
+                        <div class="relative mb-1.5">
+                            <h1 class="font-display text-6xl font-bold text-white leading-none tracking-tight drop-shadow-lg">
+                                Hidden Crises
+                            </h1>
+                            <div class="absolute -bottom-0.5 left-0 w-24 h-0.5 bg-gradient-to-r from-molten-orange via-gold to-transparent rounded-full"></div>
+                        </div>
+                        
+                        <!-- Subtitle -->
+                        <div class="relative pl-3 mb-10">
+                            <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-molten-orange via-molten-orange/60 to-transparent rounded-full"></div>
+                            <h2 class="text-xl text-white font-bold leading-snug">
+                                Stress, Mental Health &amp; Brain Health
+                            </h2>
+                            <p class="text-xl text-gold font-display font-bold">
+                                in the Black Community
+                            </p>
+                        </div>
+                        
+                        <div class="flex flex-col justify-center mb-10" style="
+    width: 470px;
+">
+                        <div class="backdrop-blur-[2px] rounded-xl">
+                            <p class="text-white/95 text-[12px] leading-relaxed" style="text-align: justify;">
+                                Toxic stress, rising suicide rates among Black men and boys, and increasing cases of Alzheimer's and dementia are pressing but often ignored issues. This conference will uncover the connections between <strong class="text-gold">stress, mental health, and cognitive decline</strong> while exploring <strong class="text-molten-orange">culturally relevant solutions</strong> for healing and resilience.
+                            </p>
+                        </div>
+                    </div><!-- Event Details Cards -->
+                        <div class="flex items-center justify-between bg-white/15 backdrop-blur-sm rounded-lg px-2 py-1 border border-white/25">
+                            <div class="-2 py-1 min-w-[160px]">
+                                <div class="flex items-center gap-1.5 ml-10">
+                                    
+                                    <div>
+                                        <p class="text-white text-[10px] font-bold uppercase tracking-wider">Registration Fees</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-1">
+                                    <div class="w-9 h-9 bg-white/20 rounded-lg flex items-center justify-center mt-[-7px]">
+                                        <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 0V4m0 16v-4m8-4h-4m-8 0H4"></path>
+                                        </svg>
+                                    </div><!-- Early Bird Column -->
+                                    <div class="flex-1" style="width:100px">
+                                        <div class="font-semibold text-gold text-[9px]">Early Bird <span class="text-white/90 text-[8px] mb-1">(thru Mar 31)</span></div>
+                                        <div class="text-white text-[9px] leading-tight">
+                                            <div>Members: <span class="font-bold">$40</span></div>
+                                            <div>Non-members: <span class="font-bold">$60</span></div>
+                                        </div>
+                                    </div>
+                                    <!-- Regular Rates Column -->
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-gold text-[9px]">Regular Rates <span class="text-white/90 text-[8px] mb-1">(Apr 1+)</span></div>
+                                        <div class="text-white text-[9px] leading-tight">
+                                            <div>Members: <span class="font-bold">$50</span></div>
+                                            <div>Non-members: <span class="font-bold">$75</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><div class="px-2 py-1">
+                                <div class="flex items-center gap-1.5">
+                                    <div class="w-9 h-9 bg-white/20 rounded-lg flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-bold text-[10px] uppercase tracking-wider">Date</p>
+                                        <p class="text-white font-bold text-[10px]">May 13, 2026</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-2 py-1">
+                                <div class="flex items-center gap-1.5">
+                                    <div class="w-9 h-9 bg-white/20 rounded-lg flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-bold text-[10px] uppercase tracking-wider">Time</p>
+                                        <p class="text-white font-bold text-[10px]">8:00 AM – 1:00 PM PT</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-2 py-1">
+                                <div class="flex items-center gap-1.5">
+        <div class="w-9 h-9 bg-white rounded-lg flex items-center justify-center overflow-hidden p-1">
+                            <img src="/images/zoom-fondo-blanco-vertical-logo-png_seeklogo-381383.png" alt="Zoom" class="w-full h-full object-contain">
+                        </div>                            
+                                    <div>
+                                        <p class="text-white font-bold text-[10px] uppercase tracking-wider">Format</p>
+                                        <p class="flex items-center gap-1 text-white font-bold text-[10px]">
+                                            <span class="inline-block w-2 h-2 rounded-full bg-red-500"></span>
+                                            Live via Zoom
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                        </div>                 
+                </div>
+            </div>
+
+            <div class="relative px-6 mt-2">
+                <div class="flex items-center justify-center gap-2 mb-2">
+                    <div class="h-px flex-1 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+                    <span class="text-white text-[10px] font-bold uppercase tracking-wider">Who Should Attend</span>
+                    <div class="h-px flex-1 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+                </div>
+                <div class="flex flex-wrap justify-center gap-1.5">
+                    <span class="px-2.5 py-1 bg-white/15 backdrop-blur-sm text-white text-[8px] font-semibold rounded-full border border-white/20">Behavioral Health Professionals</span>
+                    <span class="px-2.5 py-1 bg-white/15 backdrop-blur-sm text-white text-[9px] font-semibold rounded-full border border-white/20">Community-Based Organizations</span>
+                    <span class="px-2.5 py-1 bg-white/15 backdrop-blur-sm text-white text-[9px] font-semibold rounded-full border border-white/20">Public Health Officials</span>
+                    <span class="px-2.5 py-1 bg-white/15 backdrop-blur-sm text-white text-[9px] font-semibold rounded-full border border-white/20">Researchers &amp; Data Analysts</span>
+                    <span class="px-2.5 py-1 bg-white/15 backdrop-blur-sm text-white text-[9px] font-semibold rounded-full border border-white/20">State &amp; Local Policymakers</span>
+                </div>
+            </div>
+            
+            
+            <!-- Speakers Section -->
+            <div class="px-8 pt-3 flex-1">
+                
+                <!-- Keynote Speakers -->
+                <div class="mb-2">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="px-3 py-0.5 bg-gradient-to-r from-shamrock to-molten-orange text-white text-[8px] font-bold rounded-full uppercase tracking-wider">
+                            ★ Keynote Speakers
+                        </span>
+                        <div class="flex-1 h-px bg-gradient-to-r from-shamrock/30 to-transparent"></div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-3">
+                        <!-- Keynote 1: Dr. Curley Bonds -->
+                        <div class="bg-gradient-to-br from-white to-gray-50 rounded-lg p-1 border border-gray-200">
+                            <div class="flex gap-3">
+                                <img src="/images/headshots/Curley Bonds.jpeg" alt="Dr. Curley Bonds, MD" class="w-14 h-14 rounded-lg object-cover border border-shamrock/30 flex-shrink-0" style="aspect-ratio: 1/1;">
+                                <div class="flex-1">
+                                    <h3 class="font-display font-bold text-[10px] text-charcoal mb-0.5">Dr. Curley Bonds, MD</h3>
+                                    <p class="text-shamrock text-[8px] font-medium mb-1">Chief Medical Officer, Los Angeles County Dept. of Mental Health</p>
+                                    <p class="text-charcoal text-[8px] leading-snug">Board certified in General, Forensic, &amp; Addiction Psychiatry. UCLA faculty.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Keynote 2: Dr. Le Ondra Clark Harvey -->
+                        <div class="bg-gradient-to-br from-white to-gray-50 rounded-lg p-1 border border-gray-200">
+                            <div class="flex gap-3">
+                                <img src="/images/headshots/LCHarvey.png" alt="Dr. Le Ondra Clark Harvey, PhD" class="w-14 h-14 rounded-lg object-cover border border-molten-orange/30 flex-shrink-0" style="aspect-ratio: 1/1;">
+                                <div class="flex-1">
+                                    <h3 class="font-display font-bold text-[10px] text-charcoal mb-0.5">Dr. Le Ondra Clark Harvey, PhD</h3>
+                                    <p class="text-molten-orange text-[8px] font-medium mb-1">CEO, California Council of Community Behavioral Health Agencies</p>
+                                    <p class="text-charcoal text-[8px] leading-snug">Expert in behavioral health policy with legislative experience. Focus on equitable access.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Session Speakers -->
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="px-3 py-0.5 bg-gradient-to-r from-molten-orange to-gold text-white text-[8px] font-bold rounded-full uppercase tracking-wider">
+                            Session Speakers
+                        </span>
+                        <div class="flex-1 h-px bg-gradient-to-r from-molten-orange/40 to-transparent"></div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-2">
+                        <!-- Speaker 1: Tina Armstrong -->
+                        <div class="bg-gradient-to-br from-white to-sky/5 rounded-lg p-1 border border-sky/20">
+                            <div class="flex gap-2">
+                                <img src="/images/headshots/TinaArmstrong headshot.jpg" alt="Tina Armstrong, PhD" class="w-14 h-14 rounded-lg object-cover border border-sky/30 flex-shrink-0" style="aspect-ratio: 1/1;">
+                                <div class="flex-1 min-w-0">
+                                    <h4 class="font-display font-bold text-[10px] text-charcoal">Tina Armstrong, PhD</h4>
+                                    <p class="text-regal-navy text-[8px] font-medium mb-0.5">CEO &amp; Psychologist, Living Connected Psychology</p>
+                                    <p class="text-charcoal text-[8px] leading-snug line-clamp-2">Licensed Clinical Psychologist providing therapy and psychological assessment. Collaborates with clients, families, and treatment teams.</p>
+                                </div>
+                            </div>
+                            <div class="mt-1.5 pt-1.5 border-t border-sky/20 flex items-center gap-1">
+                                <span class="px-1.5 py-0.5 bg-sky/10 text-regal-navy text-[8px] font-semibold rounded-full">Session 1</span>
+                                <span class="text-charcoal text-[8px]">Toxic Stress</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Speaker 2: Dr. Monica Caffey -->
+                        <div class="bg-gradient-to-br from-white to-gold/5 rounded-lg p-1 border border-gold/20">
+                            <div class="flex gap-2">
+                                <img src="/images/headshots/Dr.MonicaPhoto (1) (1).jpg" alt="Dr. Monica Caffey" class="w-14 h-14 rounded-lg object-cover border border-gold/30 flex-shrink-0" style="aspect-ratio: 1/1;">
+                                <div class="flex-1 min-w-0">
+                                    <h4 class="font-display font-bold text-[10px] text-charcoal">Dr. Monica Caffey</h4>
+                                    <p class="text-golden-earth text-[8px] font-medium mb-0.5">Program Director &amp; Professor, National University</p>
+                                    <p class="text-charcoal text-[8px] leading-snug line-clamp-3">Nationally recognized mental health advocate with 19+ years of experience. Advances culturally responsive practices in education and public health.</p>
+                                </div>
+                            </div>
+                            <div class="mt-1.5 border-t border-gold/20 flex items-center gap-1">
+                                <span class="px-1.5 py-0.5 bg-gold/10 text-golden-earth text-[8px] font-semibold rounded-full">Session 2</span>
+                                <span class="text-charcoal text-[8px]">Brain Health</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Speaker 3: Kris Bennett -->
+                        <div class="bg-gradient-to-br from-white to-magenta-bloom/5 rounded-lg p-1 border border-magenta-bloom/20">
+                            <div class="flex gap-2">
+                                <img src="/images/headshots/KBHeadshot.png" alt="Kris Bennett" class="w-14 h-14 rounded-lg object-cover border border-magenta-bloom/30 flex-shrink-0" style="aspect-ratio: 1/1;">
+                                <div class="flex-1 min-w-0">
+                                    <h4 class="font-display font-bold text-[10px] text-charcoal">Kris Bennett</h4>
+                                    <p class="text-magenta-bloom text-[8px] font-medium mb-0.5">Global Dir. Health Equity, Movember Foundation</p>
+                                    <p class="text-charcoal text-[8px] leading-snug line-clamp-2">Executive leader managing global health equity strategies and leading mental health &amp; suicide prevention initiatives for men and boys.</p>
+                                </div>
+                            </div>
+                            <div class="mt-1.5 pt-1.5 border-t border-magenta-bloom/20 flex items-center gap-1">
+                                <span class="px-1.5 py-0.5 bg-magenta-bloom/10 text-magenta-bloom text-[8px] font-semibold rounded-full">Session 3</span>
+                                <span class="text-charcoal text-[8px]">Suicide Prevention</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Speaker 4: George Woods -->
+                        <div class="bg-gradient-to-br from-white to-shamrock/5 rounded-lg p-1 border border-shamrock/20">
+                            <div class="flex gap-2">
+                                <img src="/images/headshots/George Woods_7280-Crop.jpeg" alt="George Woods, MD" class="w-14 h-14 rounded-lg object-cover border border-shamrock/30 flex-shrink-0" style="aspect-ratio: 1/1;">
+                                <div class="flex-1 min-w-0">
+                                    <h4 class="font-display font-bold text-[10px] text-charcoal">George Woods, MD</h4>
+                                    <p class="text-shamrock text-[8px] font-medium mb-0.5">Neuropsychiatrist, Felton Institute</p>
+                                    <p class="text-charcoal text-[8px] leading-snug line-clamp-2">Clinical &amp; forensic neuropsychiatrist. Expert on brain dysfunction from trauma, toxic stress. Consultant for athletes, veterans on TBI/CTE.</p>
+                                </div>
+                            </div>
+                            <div class="mt-1.5 pt-1.5 border-t border-shamrock/20 flex items-center gap-1">
+                                <span class="px-1.5 py-0.5 bg-shamrock/10 text-shamrock text-[8px] font-semibold rounded-full">Session 4</span>
+                                <span class="text-charcoal text-[8px]">Crisis to Policy (HR1)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Moderator Section -->
+                <div class="mt-2">
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="px-3 py-0.5 bg-gradient-to-r from-shamrock to-molten-orange text-white text-[8px] font-bold rounded-full uppercase tracking-wider">
+                            Moderator
+                        </span>
+                        <div class="flex-1 h-px bg-gradient-to-r from-shamrock/40 to-transparent"></div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="bg-gradient-to-br from-white to-shamrock/5 rounded-lg p-1 border border-shamrock/20 shadow-shamrock/10 w-full">
+                            <div class="flex gap-4 items-center">
+                                <div class="relative flex-shrink-0">
+                                    <img src="/images/headshots/Photo-Shacunda Rodgers PhD.jpeg" alt="Shacunda Rodgers, Ph.D. headshot" class="w-14 h-14 rounded-lg object-cover object-center border border-shamrock/30 shadow-shamrock/20">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h4 class="font-display font-bold text-charcoal text-[10px]">Shacunda Rodgers, Ph.D.</h4>
+                                    <p class="text-shamrock text-[8px] font-medium mb-0.5">Licensed Clinical Psychologist | Founder and Executive Director, Holding Space</p>
+                                    <p class="text-charcoal text-[8px] leading-relaxed">
+                                        Dr. Rodgers is a licensed clinical psychologist and founder of Holding Space, dedicated to culturally responsive mental health services and advocacy for Black women and families. She brings expertise in trauma-informed care and community engagement.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Registration CTA -->
+            <div class="px-8 pb-2 pt-2">
+                <div class="relative">
+                    <div>
+                        <div class="flex items-center gap-4">
+                            <!-- QR Code -->
+                            <a href="https://bit.ly/CBHN-VBMHC2026" target="_blank" rel="noopener" class="flex-shrink-0">
+                                <img src="/images/qr-code.png" alt="Scan to Register" style="width:auto; height:auto; max-height:120px; display:block;">
+                            </a>
+                            
+                            <!-- Registration Info -->
+                            <div class="flex-1">
+                                <h3 class="font-display font-bold text-xl text-gold mb-1">Register Now!</h3>
+                                <p class="text-white text-xs mb-2 font-bold">Join us for this transformative half-day virtual conference on mental health in the Black community.</p>
+
+                                <a href="https://bit.ly/CBHN-VBMHC2026" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gradient-to-r from-molten-orange to-gold text-white px-5 py-2 rounded-full text-xs font-bold border border-gold/40">
+                                    <span>REGISTER TODAY</span>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            
+                            <!-- Contact -->
+                            <div class="flex-shrink-0 text-right">
+                                <p class="text-blood-red text-[9px] uppercase tracking-wider mb-1">Questions?</p>
+                                <p class="text-blood-red font-semibold text-xs">events@yourcbhn.org</p>
+                                <p class="text-blood-red text-[10px] mt-1">yourcbhn.org</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div class="flex items-center justify-center gap-4 mt-3">
+                    <div class="h-px flex-1 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-1.5 h-1.5 bg-molten-orange rounded-full"></div>
+                        <p class="text-white/80 text-[10px] font-semibold tracking-widest uppercase">California Black Health Network</p>
+                        <div class="w-1.5 h-1.5 bg-molten-orange rounded-full"></div>
+                    </div>
+                    <div class="h-px flex-1 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</body>
+</html>
