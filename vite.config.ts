@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
-  base: process.env.GITHUB_PAGES === 'true' ? '/cbhn-playground/' : '/',
+  base: '/cbhn-playground/',
   plugins: [react()],
   resolve: {
     alias: {
