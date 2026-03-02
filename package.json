@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "CBHN project playground — local workspace for creating deliverables",
+  "description": "CBHN project playground, local workspace for creating deliverables",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

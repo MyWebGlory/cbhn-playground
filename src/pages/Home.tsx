@@ -11,7 +11,7 @@ export default function Home() {
           <img src={`${import.meta.env.BASE_URL}images/cbhn-logo.png`} alt="CBHN" className="h-10 w-auto" />
           <div>
             <h1 className="text-white text-xl font-bold tracking-tight">CBHN Playground</h1>
-            <p className="text-white/50 text-sm">Project workspace &mdash; California Black Health Network</p>
+            <p className="text-white/50 text-sm">Project workspace, California Black Health Network</p>
           </div>
         </div>
       </header>

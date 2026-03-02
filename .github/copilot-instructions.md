@@ -1,4 +1,4 @@
-# copilot.md — CBHN (California Black Health Network) Context
+# copilot.md, CBHN (California Black Health Network) Context
 
 ## Who CBHN is
 CBHN = **California Black Health Network**, a nonprofit/community health organization focused on **Black health equity** in California. Their work sits at the intersection of:
@@ -36,9 +36,9 @@ Important: I often repurpose existing CBHN branding/assets to keep consistency a
 ---
 
 ## Key CBHN people (known)
-- **Rhonda Smith** — Executive Director (ED), CBHN
-- **Jamila** — works with Rhonda (campaign coordination / approvals / sponsorships)
-- **Jessica Garza** — Rhonda’s assistant (event logistics requests)
+- **Rhonda Smith**, Executive Director (ED), CBHN
+- **Jamila**, works with Rhonda (campaign coordination / approvals / sponsorships)
+- **Jessica Garza**, Rhonda’s assistant (event logistics requests)
 
 (Other speakers are usually partners/guests; see events below.)
 
@@ -72,7 +72,7 @@ This forum is an opportunity for everyone to come together, get your questions a
 ---
 
 ## Event: Virtual Behavioral & Mental Health Conference (May 2026)
-**Title:** *Hidden Crises—Stress, Mental Health & Brain Health in the Black Community*  
+**Title:** *Hidden Crises, Stress, Mental Health & Brain Health in the Black Community*  
 **Date & Time:** Wednesday, **May 13, 2026**, 8am–1pm  
 **Target audience (broad):**
 - behavioral health professionals
@@ -95,19 +95,19 @@ This forum is an opportunity for everyone to come together, get your questions a
 - breaking stigma + raising awareness
 
 ### Agenda (high level)
-- 8:00 — Welcome & Keynote
-- 9:00 — Toxic Stress
-- 10:00 — Brain Health
-- 11:00 — Suicide Among Black Men and Boys
-- 12:00–12:25 — From Crisis to Policy: How HR1 Is Reshaping Black Mental Health
-- 12:30 — Closing Keynote
+- 8:00, Welcome & Keynote
+- 9:00, Toxic Stress
+- 10:00, Brain Health
+- 11:00, Suicide Among Black Men and Boys
+- 12:00–12:25, From Crisis to Policy: How HR1 Is Reshaping Black Mental Health
+- 12:30, Closing Keynote
 
 ### Speakers (known)
 - Welcome + Keynote (8–8:50am):
   - Rhonda Smith (ED, CBHN)
   - Dr. Curley Bonds (Chief Medical Officer, LA County Dept. of Mental Health)
 - Workshop 1: Toxic Stress (9–9:50am):
-  - Dr. Tina Houston Armstrong (CEO, Living Connected Psychological, Inc.; Licensed Clinical Psychologist) — CEU
+  - Dr. Tina Houston Armstrong (CEO, Living Connected Psychological, Inc.; Licensed Clinical Psychologist), CEU
 - Workshop 2: Brain Health (10–10:50am):
   - Dr. Monica Caffey (Academic Program Director & Professor, MA Counseling Psychology, National University)
 - Workshop 3: Suicide Among Black Men and Boys (11–11:50am):
@@ -115,13 +115,13 @@ This forum is an opportunity for everyone to come together, get your questions a
 - Workshop 4 (12–12:25pm): From Crisis to Policy: How HR1 Is Reshaping Black Mental Health
   - George Woods, MD (Felton Institute Board Chair)
 - Closing Keynote (12:30–12:50pm):
-  - Dr. Le Ondra Clark Harvey (CEO, California Behavioral Health Association — CBHA)
+  - Dr. Le Ondra Clark Harvey (CEO, California Behavioral Health Association, CBHA)
 
 ### Registration fees (as provided)
-- $50 — General Admission (Early Bird & Members)
-- $75 — Non-Members
-- $95 — General Admission + 1 CEU
-- $115 — CEU Package (1 CEU + Replay Access + Materials/Handouts)
+- $50, General Admission (Early Bird & Members)
+- $75, Non-Members
+- $95, General Admission + 1 CEU
+- $115, CEU Package (1 CEU + Replay Access + Materials/Handouts)
 
 ---
 
@@ -162,7 +162,7 @@ When asked to create CBHN assets:
 
 ## Helpful shortcuts / snippets
 ### Event positioning sentence (template)
-“CBHN is convening this forum to help Black Californians and other vulnerable communities understand what’s changing, what to expect next, and how to stay covered—while creating space for questions, clarity, and advocacy.”
+“CBHN is convening this forum to help Black Californians and other vulnerable communities understand what’s changing, what to expect next, and how to stay covered, while creating space for questions, clarity, and advocacy.”
 
 
 ### CTAs (template)
@@ -186,7 +186,7 @@ This approach ensures that every new CBHN request (web page, flyer, report, etc.
 
 ---
 
-## Technical Best Practices — Static Project HTML Files
+## Technical Best Practices, Static Project HTML Files
 
 ### Context: how static projects are served
 - The Vite app has `base: '/cbhn-playground/'` in `vite.config.ts`.
@@ -194,7 +194,7 @@ This approach ensures that every new CBHN request (web page, flyer, report, etc.
 - They are served inside a full-page `<iframe>` by `src/pages/StaticProject.tsx`.
 - The PDF export script (`scripts/export_pdf.py`) runs a local Python HTTP server from `public/` and uses Playwright to render the page.
 
-### Image & asset paths — always use relative paths
+### Image & asset paths, always use relative paths
 **Never use absolute paths like `/images/...` or `/styles/...`** in static project HTML files. Absolute paths break under Vite's `/cbhn-playground/` base and may also break the PDF export server.
 
 Always use relative paths from the file's own location:
@@ -230,14 +230,14 @@ headshots/
   Jamila Jabulani.jpeg
 ```
 
-### Fixed dimensions — no responsive scaling
+### Fixed dimensions, no responsive scaling
 Static project pages are **print/export artifacts**, not responsive web pages. They must be locked to exact dimensions at all times so they render correctly in the iframe viewer and in PDF export.
 
 **Rules:**
 1. Set the viewport meta to the pixel-equivalent of the fixed width (not `device-width`).
 2. Apply `min-width`, `max-width`, `min-height`, `max-height`, and `flex-shrink: 0` on the root page element.
 3. Remove any `@media` queries that scale or resize the layout.
-4. The viewer iframe will show scrollbars if the content is larger than the viewport — this is intentional.
+4. The viewer iframe will show scrollbars if the content is larger than the viewport, this is intentional.
 
 **Per-project dimensions and viewport meta:**
 

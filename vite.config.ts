@@ -23,13 +23,20 @@ export default defineConfig({
         })
       },
     },
-  ],
-  server: {
-    watch: {
-      // Also watch static project files in public/ for live reload
-      paths: ['public/**'],
+    {
+      name: 'watch-public',
+      configureServer(server) {
+        // Watch all files under public/ (static project HTML, CSS, images, etc.)
+        // and trigger a full-page reload whenever any of them change.
+        server.watcher.add(path.resolve(__dirname, 'public'))
+        server.watcher.on('change', (file) => {
+          if (file.includes(`${path.sep}public${path.sep}`)) {
+            server.ws.send({ type: 'full-reload', path: '*' })
+          }
+        })
+      },
     },
-  },
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
