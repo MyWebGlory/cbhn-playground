@@ -8,7 +8,7 @@ export default function Home() {
       {/* Header */}
       <header className="border-b border-white/10 px-8 py-6">
         <div className="max-w-5xl mx-auto flex items-center gap-4">
-          <img src="/images/cbhn-logo.png" alt="CBHN" className="h-10 w-auto" />
+          <img src={`${import.meta.env.BASE_URL}images/cbhn-logo.png`} alt="CBHN" className="h-10 w-auto" />
           <div>
             <h1 className="text-white text-xl font-bold tracking-tight">CBHN Playground</h1>
             <p className="text-white/50 text-sm">Project workspace &mdash; California Black Health Network</p>

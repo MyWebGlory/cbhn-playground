@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080">
+    <title>CBHN HR1 Forum — Social Media Graphics (Vertical)</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'shamrock': '#36c98a',
+                        'molten-orange': '#ff5a1f',
+                        'gold': '#ffd600',
+                        'sky': '#00c3f3',
+                        'deep-blue': '#003687',
+                        'magenta-bloom': '#fc0367',
+                        'cream': '#f9f6f2',
+                        'charcoal': '#23272a',
+                    },
+                    fontFamily: {
+                        'sans': ['Open Sans', 'sans-serif'],
+                        'display': ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="../../styles/main.css">
+
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 50px 0 50px 0;
+            background: #0e0e10;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 50px;
+            font-family: 'Open Sans', sans-serif;
+            min-width: 100vw;
+            min-height: 100vh;
+            overflow-x: auto;
+        }
+        .graphic-label {
+            width: 1080px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: -36px;
+        }
+        .graphic-label-text {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.3);
+        }
+        .graphic-label-size {
+            font-size: 10px;
+            color: rgba(255,255,255,0.2);
+        }
+        .card {
+            width: 1080px;
+            min-width: 1080px;
+            max-width: 1080px;
+            height: 1350px;
+            min-height: 1350px;
+            max-height: 1350px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            box-shadow: 0 30px 100px rgba(0,0,0,0.6);
+        }
+
+        /* ========================================
+           CARD 1 — Speaker Spotlight
+           ======================================== */
+        .card-1 {
+            background: linear-gradient(165deg, #001845 0%, #002a6e 30%, #003a94 65%, #004dbf 100%);
+        }
+        /* Decorative orbs */
+        .card-1 .orb-1 {
+            position: absolute;
+            top: -120px; right: -80px;
+            width: 520px; height: 520px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 40% 40%, rgba(54,201,138,0.25), transparent 65%);
+        }
+        .card-1 .orb-2 {
+            position: absolute;
+            bottom: -100px; left: -100px;
+            width: 450px; height: 450px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 60% 60%, rgba(255,214,0,0.15), transparent 65%);
+        }
+        .card-1 .orb-3 {
+            position: absolute;
+            top: 350px; left: -60px;
+            width: 300px; height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(252,3,103,0.1), transparent 60%);
+        }
+        /* Geometric lines */
+        .card-1 .geo-line-1 {
+            position: absolute;
+            top: 80px; right: 60px;
+            width: 180px; height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(54,201,138,0.5), transparent);
+        }
+        .card-1 .geo-line-2 {
+            position: absolute;
+            bottom: 200px; left: 50px;
+            width: 120px; height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255,214,0,0.4), transparent);
+        }
+        /* Top bar */
+        .card-1 .top-bar {
+            height: 8px;
+            background: linear-gradient(90deg, #36c98a, #ffd600, #ff5a1f, #fc0367);
+            flex-shrink: 0;
+        }
+        /* Header zone */
+        .card-1 .header-zone {
+            padding: 40px 64px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 3;
+            flex-shrink: 0;
+        }
+        .card-1 .header-zone img { height: 40px; }
+        .card-1 .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(54,201,138,0.15);
+            border: 1.5px solid rgba(54,201,138,0.45);
+            color: #36c98a;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            padding: 8px 20px;
+            border-radius: 99px;
+        }
+        .card-1 .pill svg { width: 16px; height: 16px; }
+        /* Photo section */
+        .card-1 .photo-zone {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 3;
+            padding: 0 64px;
+        }
+        .card-1 .photo-ring {
+            width: 340px; height: 340px;
+            border-radius: 50%;
+            padding: 6px;
+            background: linear-gradient(135deg, #36c98a, #ffd600, #ff5a1f);
+            margin-bottom: 36px;
+        }
+        .card-1 .photo-ring img,
+        .card-1 .photo-ring .ph {
+            width: 100%; height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+        }
+        .card-1 .photo-ring .ph {
+            background: linear-gradient(135deg, #003a94, #002055);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.35);
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+        }
+        /* Speaker info */
+        .card-1 .speaker-info {
+            text-align: center;
+            position: relative;
+            z-index: 3;
+        }
+        .card-1 .speaker-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+        .card-1 .speaker-role {
+            font-size: 22px;
+            font-weight: 700;
+            color: #36c98a;
+            margin-bottom: 4px;
+        }
+        .card-1 .speaker-org {
+            font-size: 20px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.65);
+            margin-bottom: 32px;
+        }
+        /* Bottom info bar */
+        .card-1 .bottom-zone {
+            background: rgba(0,0,0,0.35);
+            padding: 28px 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 3;
+            flex-shrink: 0;
+        }
+        .card-1 .info-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .card-1 .info-icon {
+            width: 44px; height: 44px;
+            border-radius: 12px;
+            background: rgba(54,201,138,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .card-1 .info-icon svg { width: 22px; height: 22px; color: #36c98a; }
+        .card-1 .info-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.45);
+        }
+        .card-1 .info-value {
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+        }
+        /* Footer logos */
+        .card-1 .footer-zone {
+            padding: 20px 64px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 3;
+            flex-shrink: 0;
+        }
+        .card-1 .logo-row {
+            display: flex; align-items: center; gap: 16px;
+        }
+        .card-1 .logo-row img { height: 34px; }
+        .card-1 .logo-sep {
+            width: 1.5px; height: 26px;
+            background: rgba(255,255,255,0.25);
+        }
+        .card-1 .covered-text {
+            font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.55);
+        }
+        .card-1 .forum-label {
+            font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+            text-transform: uppercase; color: rgba(255,255,255,0.35);
+        }
+        /* Bottom accent */
+        .card-1 .btm-bar {
+            height: 8px;
+            background: linear-gradient(90deg, #fc0367, #ff5a1f, #ffd600, #36c98a);
+            flex-shrink: 0;
+        }
+
+        /* ========================================
+           CARD 2 — Event Announcement
+           ======================================== */
+        .card-2 {
+            background: #fff;
+        }
+        .card-2 .top-gradient {
+            height: 540px;
+            flex-shrink: 0;
+            background: linear-gradient(160deg, #001845, #002a6e 40%, #003a94 75%, #36c98a 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 44px 64px;
+        }
+        .card-2 .top-gradient .shape-1 {
+            position: absolute;
+            top: -80px; right: -80px;
+            width: 400px; height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,214,0,0.2), transparent 65%);
+        }
+        .card-2 .top-gradient .shape-2 {
+            position: absolute;
+            bottom: -60px; left: 30%;
+            width: 280px; height: 280px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(252,3,103,0.12), transparent 60%);
+        }
+        .card-2 .top-gradient .shape-3 {
+            position: absolute;
+            top: 50%; left: -40px;
+            width: 200px; height: 200px;
+            border: 3px solid rgba(255,255,255,0.06);
+            border-radius: 50%;
+        }
+        .card-2 .top-gradient .diag-stripe {
+            position: absolute;
+            bottom: 0; right: 0;
+            width: 300px; height: 100%;
+            background: linear-gradient(200deg, rgba(54,201,138,0.15), transparent 50%);
+        }
+        .card-2 .top-row {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 32px;
+            position: relative; z-index: 2;
+        }
+        .card-2 .top-row img { height: 38px; }
+        .card-2 .top-pill {
+            display: inline-flex; align-items: center; gap: 7px;
+            background: rgba(255,255,255,0.12);
+            border: 1.5px solid rgba(255,255,255,0.25);
+            color: #fff;
+            font-size: 11px; font-weight: 800;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            padding: 8px 18px;
+            border-radius: 99px;
+        }
+        .card-2 .top-pill svg { width: 15px; height: 15px; }
+        .card-2 .title-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative; z-index: 2;
+        }
+        .card-2 .title-area .forum-tag {
+            font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+            text-transform: uppercase; color: #ffd600;
+            margin-bottom: 14px;
+        }
+        .card-2 .title-area h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px; font-weight: 800;
+            color: #fff;
+            line-height: 1.18;
+            margin: 0;
+        }
+        /* Main content area */
+        .card-2 .content-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 44px 64px 32px;
+        }
+        .card-2 .desc-text {
+            font-size: 20px;
+            color: #374151;
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+        /* Detail chips */
+        .card-2 .detail-row {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 36px;
+        }
+        .card-2 .detail-chip {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: #f0f5ff;
+            border-radius: 14px;
+            padding: 16px 22px;
+        }
+        .card-2 .chip-icon {
+            width: 44px; height: 44px;
+            border-radius: 12px;
+            background: #003687;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .card-2 .chip-icon svg { width: 22px; height: 22px; color: #fff; }
+        .card-2 .chip-text {
+            font-size: 17px; font-weight: 700; color: #003687;
+        }
+        /* CTA */
+        .card-2 .cta-row {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .card-2 .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #003687, #004db3);
+            color: #fff;
+            font-size: 18px; font-weight: 800;
+            padding: 18px 36px;
+            border-radius: 14px;
+            text-decoration: none;
+        }
+        .card-2 .cta-sub {
+            font-size: 14px; font-weight: 600; color: #6b7280;
+        }
+        /* Bottom bar */
+        .card-2 .btm-bar {
+            height: 8px;
+            flex-shrink: 0;
+            background: linear-gradient(90deg, #003687, #36c98a, #ffd600, #ff5a1f, #fc0367);
+        }
+
+        /* ========================================
+           CARD 3 — "What's Changing?" Teaser
+           ======================================== */
+        .card-3 {
+            background: #0a0e1a;
+        }
+        /* huge background mesh */
+        .card-3 .mesh {
+            position: absolute; inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 20% 20%, rgba(0,54,135,0.45), transparent),
+                radial-gradient(ellipse 50% 40% at 80% 75%, rgba(54,201,138,0.3), transparent),
+                radial-gradient(ellipse 40% 35% at 60% 10%, rgba(252,3,103,0.15), transparent),
+                radial-gradient(ellipse 45% 40% at 10% 85%, rgba(255,214,0,0.12), transparent);
+        }
+        /* diagonal grid overlay */
+        .card-3 .grid-overlay {
+            position: absolute; inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        /* Floating geometric shapes */
+        .card-3 .float-ring {
+            position: absolute;
+            width: 320px; height: 320px;
+            border: 3px solid rgba(54,201,138,0.15);
+            border-radius: 50%;
+            top: -40px; right: -60px;
+        }
+        .card-3 .float-ring-2 {
+            position: absolute;
+            width: 200px; height: 200px;
+            border: 2px solid rgba(255,214,0,0.1);
+            border-radius: 50%;
+            bottom: 120px; left: -30px;
+        }
+        .card-3 .float-diamond {
+            position: absolute;
+            width: 80px; height: 80px;
+            border: 2px solid rgba(252,3,103,0.15);
+            transform: rotate(45deg);
+            top: 300px; right: 80px;
+        }
+        .card-3 .float-dot {
+            position: absolute;
+            width: 12px; height: 12px;
+            border-radius: 50%;
+            background: rgba(54,201,138,0.4);
+        }
+        .card-3 .dot-1 { top: 160px; left: 80px; }
+        .card-3 .dot-2 { top: 700px; right: 120px; width: 8px; height: 8px; background: rgba(255,214,0,0.4); }
+        .card-3 .dot-3 { bottom: 280px; left: 200px; width: 10px; height: 10px; background: rgba(252,3,103,0.35); }
+        /* Content */
+        .card-3 .content {
+            position: relative; z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 70px 72px;
+            height: 100%;
+        }
+        .card-3 .top-logos {
+            display: flex; align-items: center; gap: 16px;
+            margin-bottom: 40px;
+        }
+        .card-3 .top-logos img { height: 34px; }
+        .card-3 .top-logos .sep { width: 1.5px; height: 24px; background: rgba(255,255,255,0.2); }
+        .card-3 .top-logos span { font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.45); }
+        .card-3 .pill {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(54,201,138,0.12);
+            border: 1.5px solid rgba(54,201,138,0.35);
+            color: #36c98a;
+            font-size: 13px; font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            padding: 10px 22px;
+            border-radius: 99px;
+            margin-bottom: 48px;
+        }
+        .card-3 .pill svg { width: 16px; height: 16px; }
+        .card-3 .pre-title {
+            font-size: 15px; font-weight: 700; letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 20px;
+        }
+        .card-3 .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 800;
+            line-height: 1.05;
+            margin-bottom: 24px;
+        }
+        .card-3 .main-title .w1 { color: #fff; }
+        .card-3 .main-title .w2 {
+            background: linear-gradient(90deg, #36c98a, #ffd600);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-3 .bullets {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 20px;
+            margin-bottom: 48px;
+        }
+        .card-3 .bullet {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px;
+            padding: 12px 20px;
+        }
+        .card-3 .bullet svg { width: 18px; height: 18px; flex-shrink: 0; }
+        .card-3 .bullet span { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.8); }
+        .card-3 .date-strip {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 20px 36px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 44px;
+        }
+        .card-3 .date-strip .ds-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .card-3 .date-strip svg { width: 20px; height: 20px; color: #36c98a; }
+        .card-3 .date-strip span { font-size: 18px; font-weight: 700; color: #fff; }
+        .card-3 .date-strip .ds-sep { width: 1px; height: 24px; background: rgba(255,255,255,0.15); }
+        .card-3 .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #36c98a, #00c3f3);
+            color: #001845;
+            font-size: 20px; font-weight: 800;
+            padding: 20px 44px;
+            border-radius: 14px;
+            text-decoration: none;
+        }
+        .card-3 .btm-bar {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, #003687, #36c98a, #ffd600, #ff5a1f);
+            z-index: 5;
+        }
+
+        /* ========================================
+           CARD 4 — Final Reminder
+           ======================================== */
+        .card-4 {
+            background: linear-gradient(150deg, #001845 0%, #002a6e 35%, #003a94 70%, #004db3 100%);
+        }
+        .card-4 .glow-1 {
+            position: absolute;
+            top: -80px; left: -80px;
+            width: 500px; height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(54,201,138,0.35), transparent 60%);
+        }
+        .card-4 .glow-2 {
+            position: absolute;
+            bottom: -120px; right: -60px;
+            width: 550px; height: 550px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,214,0,0.2), transparent 60%);
+        }
+        .card-4 .glow-3 {
+            position: absolute;
+            top: 50%; right: 20%;
+            width: 350px; height: 350px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(252,3,103,0.12), transparent 55%);
+        }
+        /* Diagonal slash */
+        .card-4 .slash {
+            position: absolute;
+            top: 0; right: 0;
+            width: 0; height: 0;
+            border-style: solid;
+            border-width: 0 540px 1350px 0;
+            border-color: transparent rgba(54,201,138,0.06) transparent transparent;
+        }
+        .card-4 .ring-1 {
+            position: absolute;
+            bottom: 260px; left: -40px;
+            width: 180px; height: 180px;
+            border: 3px solid rgba(255,214,0,0.12);
+            border-radius: 50%;
+        }
+        .card-4 .ring-2 {
+            position: absolute;
+            top: 80px; right: 60px;
+            width: 100px; height: 100px;
+            border: 2px solid rgba(255,255,255,0.06);
+            border-radius: 50%;
+        }
+        .card-4 .content {
+            position: relative; z-index: 3;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: 0;
+        }
+        /* Top section */
+        .card-4 .top-section {
+            padding: 44px 64px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        .card-4 .top-section .logo-row { display: flex; align-items: center; gap: 16px; }
+        .card-4 .top-section img { height: 38px; }
+        .card-4 .top-section .sep { width: 1.5px; height: 26px; background: rgba(255,255,255,0.2); }
+        .card-4 .top-section .covered { font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.5); }
+        .card-4 .urgency-pill {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255,90,31,0.2);
+            border: 1.5px solid rgba(255,90,31,0.5);
+            color: #ff5a1f;
+            font-size: 13px; font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 10px 22px;
+            border-radius: 99px;
+        }
+        .card-4 .urgency-pill svg { width: 16px; height: 16px; }
+        /* Center content */
+        .card-4 .center {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 64px;
+            text-align: center;
+        }
+        .card-4 .big-date {
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #ffd600;
+            margin-bottom: 20px;
+        }
+        .card-4 .main-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 68px;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.05;
+            margin-bottom: 28px;
+        }
+        .card-4 .subtitle {
+            font-size: 22px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.5;
+            max-width: 800px;
+            margin-bottom: 24px;
+        }
+        .card-4 .speaker-line {
+            font-size: 17px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 40px;
+        }
+        .card-4 .speaker-line strong { color: #36c98a; font-weight: 700; }
+        /* CTA section */
+        .card-4 .cta-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+        .card-4 .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #36c98a, #00c3f3);
+            color: #001845;
+            font-size: 22px; font-weight: 800;
+            padding: 22px 52px;
+            border-radius: 16px;
+            text-decoration: none;
+        }
+        .card-4 .cta-free {
+            font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.4);
+            letter-spacing: 0.06em;
+        }
+        /* Bottom detail bar */
+        .card-4 .bottom-bar {
+            flex-shrink: 0;
+            background: rgba(0,0,0,0.3);
+            padding: 22px 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+        }
+        .card-4 .bb-item {
+            display: flex; align-items: center; gap: 10px;
+        }
+        .card-4 .bb-item svg { width: 20px; height: 20px; color: #36c98a; }
+        .card-4 .bb-item span { font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.8); }
+        .card-4 .bb-sep { width: 1px; height: 22px; background: rgba(255,255,255,0.15); }
+        .card-4 .btm-bar {
+            height: 8px;
+            background: linear-gradient(90deg, #36c98a, #ffd600, #ff5a1f, #fc0367, #003687);
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==========================================
+     CARD 1 — SPEAKER SPOTLIGHT
+     ========================================== -->
+<div class="graphic-label">
+    <span class="graphic-label-text">01 — Speaker Spotlight</span>
+    <span class="graphic-label-size">1080 × 1350 px — IG · FB · LinkedIn (vertical)</span>
+</div>
+<div class="card card-1">
+    <!-- Decorative background -->
+    <div class="orb-1"></div>
+    <div class="orb-2"></div>
+    <div class="orb-3"></div>
+    <div class="geo-line-1"></div>
+    <div class="geo-line-2"></div>
+
+    <!-- Top gradient bar -->
+    <div class="top-bar"></div>
+
+    <!-- Header -->
+    <div class="header-zone">
+        <img src="../../images/cbhn-white.png" alt="CBHN" />
+        <div class="pill">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" /></svg>
+            Featured Speaker
+        </div>
+    </div>
+
+    <!-- Photo -->
+    <div class="photo-zone">
+        <div class="photo-ring">
+            <!--
+                SWAP IN HEADSHOT:
+                <img src="../../images/headshots/DrMonicaSoni.jpg" alt="Dr. Monica Soni" />
+            -->
+            <div class="ph">Photo<br>Pending</div>
+        </div>
+        <div class="speaker-info">
+            <div class="speaker-name">Dr. Monica Soni</div>
+            <div class="speaker-role">Chief Medical Officer</div>
+            <div class="speaker-org">Covered California</div>
+        </div>
+    </div>
+
+    <!-- Bottom info stripe -->
+    <div class="bottom-zone">
+        <div class="info-item">
+            <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+            </div>
+            <div>
+                <div class="info-label">Date</div>
+                <div class="info-value">March 26, 2026</div>
+            </div>
+        </div>
+        <div class="info-item">
+            <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </div>
+            <div>
+                <div class="info-label">Time</div>
+                <div class="info-value">12 – 1 PM PT</div>
+            </div>
+        </div>
+        <div class="info-item">
+            <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z" /></svg>
+            </div>
+            <div>
+                <div class="info-label">Format</div>
+                <div class="info-value">Free Webinar</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logo footer -->
+    <div class="footer-zone">
+        <div class="logo-row">
+            <img src="../../images/cbhn-white.png" alt="CBHN" />
+            <div class="logo-sep"></div>
+            <span class="covered-text">Covered California</span>
+        </div>
+        <span class="forum-label">Health Equity Forum</span>
+    </div>
+
+    <div class="btm-bar"></div>
+</div>
+
+
+<!-- ==========================================
+     CARD 2 — EVENT ANNOUNCEMENT
+     ========================================== -->
+<div class="graphic-label">
+    <span class="graphic-label-text">02 — Event Announcement</span>
+    <span class="graphic-label-size">1080 × 1350 px — IG · FB · LinkedIn (vertical)</span>
+</div>
+<div class="card card-2">
+    <!-- Top gradient hero -->
+    <div class="top-gradient">
+        <div class="shape-1"></div>
+        <div class="shape-2"></div>
+        <div class="shape-3"></div>
+        <div class="diag-stripe"></div>
+
+        <div class="top-row">
+            <img src="../../images/cbhn-white.png" alt="CBHN" />
+            <div class="top-pill">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z" /></svg>
+                Free Virtual Webinar
+            </div>
+        </div>
+
+        <div class="title-area">
+            <div class="forum-tag">CBHN Health Equity Forum</div>
+            <h2>Navigating HR1:<br>What's Changing,<br>What's Next, and<br>How to Stay Covered</h2>
+        </div>
+    </div>
+
+    <!-- Content area -->
+    <div class="content-area">
+        <p class="desc-text">Join the California Black Health Network for a live, interactive discussion on the impact of HR1 on healthcare access, affordability, and coverage for Black Californians and vulnerable communities.</p>
+
+        <div class="detail-row">
+            <div class="detail-chip">
+                <div class="chip-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+                </div>
+                <span class="chip-text">March 26, 2026 · 12:00 – 1:00 PM Pacific</span>
+            </div>
+            <div class="detail-chip">
+                <div class="chip-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" /></svg>
+                </div>
+                <span class="chip-text">Speaker: Dr. Monica Soni, CMO — Covered California</span>
+            </div>
+            <div class="detail-chip">
+                <div class="chip-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" /></svg>
+                </div>
+                <span class="chip-text">Free Admission · Interactive Q&amp;A</span>
+            </div>
+        </div>
+
+        <div class="cta-row">
+            <a class="cta-btn" href="https://us06web.zoom.us/webinar/register/WN_Zh6EMM_TRfqyPZIKiPHO6g">Save Your Seat — Register Free →</a>
+            <span class="cta-sub">Registration required</span>
+        </div>
+    </div>
+
+    <div class="btm-bar"></div>
+</div>
+
+
+<!-- ==========================================
+     CARD 3 — "What's Changing?" Teaser
+     ========================================== -->
+<div class="graphic-label">
+    <span class="graphic-label-text">03 — "What's Changing?" Teaser</span>
+    <span class="graphic-label-size">1080 × 1350 px — IG · FB · LinkedIn (vertical)</span>
+</div>
+<div class="card card-3">
+    <!-- Background layers -->
+    <div class="mesh"></div>
+    <div class="grid-overlay"></div>
+    <div class="float-ring"></div>
+    <div class="float-ring-2"></div>
+    <div class="float-diamond"></div>
+    <div class="float-dot dot-1"></div>
+    <div class="float-dot dot-2"></div>
+    <div class="float-dot dot-3"></div>
+
+    <div class="content">
+        <!-- Logos at top -->
+        <div class="top-logos">
+            <img src="../../images/cbhn-white.png" alt="CBHN" />
+            <div class="sep"></div>
+            <span>Covered California</span>
+        </div>
+
+        <div class="pill">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" /></svg>
+            Health Equity Forum
+        </div>
+
+        <div class="pre-title">HR1 — One Big Beautiful Bill Act</div>
+
+        <div class="main-title">
+            <span class="w1">What's Changing<br>in </span><span class="w2">2026–2027?</span>
+        </div>
+
+        <!-- Topic bullets -->
+        <div class="bullets">
+            <div class="bullet">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#ff5a1f"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" /></svg>
+                <span>Healthcare Costs</span>
+            </div>
+            <div class="bullet">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#36c98a"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+                <span>Coverage Rules</span>
+            </div>
+            <div class="bullet">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#ffd600"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" /></svg>
+                <span>Medicaid Shifts</span>
+            </div>
+            <div class="bullet">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#fc0367"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" /></svg>
+                <span>Black Californians</span>
+            </div>
+        </div>
+
+        <!-- Date strip -->
+        <div class="date-strip">
+            <div class="ds-item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+                <span>March 26</span>
+            </div>
+            <div class="ds-sep"></div>
+            <div class="ds-item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span>12 PM PT</span>
+            </div>
+            <div class="ds-sep"></div>
+            <div class="ds-item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" /></svg>
+                <span>Free</span>
+            </div>
+        </div>
+
+        <a class="cta-btn" href="https://us06web.zoom.us/webinar/register/WN_Zh6EMM_TRfqyPZIKiPHO6g">Get Informed — Register Free →</a>
+    </div>
+
+    <div class="btm-bar"></div>
+</div>
+
+
+<!-- ==========================================
+     CARD 4 — FINAL REMINDER / REGISTER NOW
+     ========================================== -->
+<div class="graphic-label">
+    <span class="graphic-label-text">04 — Final Reminder / Register Now</span>
+    <span class="graphic-label-size">1080 × 1350 px — IG · FB · LinkedIn (vertical)</span>
+</div>
+<div class="card card-4">
+    <!-- Background layers -->
+    <div class="glow-1"></div>
+    <div class="glow-2"></div>
+    <div class="glow-3"></div>
+    <div class="slash"></div>
+    <div class="ring-1"></div>
+    <div class="ring-2"></div>
+
+    <div class="content">
+        <!-- Top bar -->
+        <div class="top-section">
+            <div class="logo-row">
+                <img src="../../images/cbhn-white.png" alt="CBHN" />
+                <div class="sep"></div>
+                <span class="covered">Covered California</span>
+            </div>
+            <div class="urgency-pill">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" /></svg>
+                Happening Soon
+            </div>
+        </div>
+
+        <!-- Center content -->
+        <div class="center">
+            <div class="big-date">Thursday, March 26, 2026</div>
+            <div class="main-headline">Don't Miss<br>This Forum.</div>
+            <div class="subtitle">Navigating HR1: What's Changing, What's Next, and How to Stay Covered</div>
+            <div class="speaker-line">Speaker: <strong>Dr. Monica Soni</strong> · Chief Medical Officer, Covered California</div>
+
+            <div class="cta-section">
+                <a class="cta-btn" href="https://us06web.zoom.us/webinar/register/WN_Zh6EMM_TRfqyPZIKiPHO6g">Register Now — It's Free</a>
+                <span class="cta-free">No cost · Registration required · Interactive Q&amp;A</span>
+            </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="bottom-bar">
+            <div class="bb-item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span>12:00 – 1:00 PM PT</span>
+            </div>
+            <div class="bb-sep"></div>
+            <div class="bb-item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z" /></svg>
+                <span>Free Virtual Webinar</span>
+            </div>
+            <div class="bb-sep"></div>
+            <div class="bb-item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" /></svg>
+                <span>Interactive Q&amp;A</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="btm-bar"></div>
+</div>
+
+<div style="height:50px;"></div>
+
+</body>
+</html>

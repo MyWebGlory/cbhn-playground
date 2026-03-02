@@ -44,23 +44,27 @@ Important: I often repurpose existing CBHN branding/assets to keep consistency a
 
 ---
 
+
 ## Event: CBHN Health Equity Forum (HR1)
-**Title:** CBHN Health Equity Forum: *Navigating HR1: What’s Changing, What’s Next, and How to Stay Covered*  
-**Topic:** Impact of HR1 (“One Big Beautiful Bill Act”) on healthcare:
-- access, availability, affordability
-- changes in healthcare costs
-- coverage shifts
-- what to expect in 2026–2027
-- anticipated changes affecting Black Californians and other vulnerable communities
-**Format:** interactive discussion + Q&A  
-**Featured Speaker:** **Dr. Monica Soni**, Chief Medical Officer, Covered California (Covered CA)  
-**Purpose:** educate, prepare community, encourage advocacy, and drive registrations
+**Title:** CBHN Health Equity Forum: *Navigating HR1: What’s Changing, What’s Next, and How to Stay Covered*
 
-**Date/Time (local to Vietnam shown in the invite):**
-- Mar 27, 2026, 02:00 AM (Vietnam time)
-(Original materials also referenced March 26, 2026 12–1pm; treat timezone carefully.)
+**Date:** March 26, 2026
 
-Assets typically needed for this event:
+**Time:** 12p to 1p (Pacific Time)
+
+**Speaker:** Dr. Monica Soni, Chief Medical Officer, Covered California
+
+**Description:**
+Join the California Black Health Network for a Health Equity Forum on the impact of HR1 (One Big Beautiful Bill Act) on healthcare access, availability, and affordability.  This will be an interactive discussion changes in healthcare costs, shifts in coverage, what to expect in 2026–2027 and anticipated changes that will affect Black Californians and other vulnerable communities.
+
+This forum is an opportunity for everyone to come together, get your questions answered, and engage in meaningful dialogue about the new and ever-changing healthcare landscape.  Don’t miss this opportunity to get informed, prepare for changes, and advocate for your health.
+
+
+**Registration:** https://us06web.zoom.us/webinar/register/WN_Zh6EMM_TRfqyPZIKiPHO6g
+
+**Format:** Interactive discussion + Q&A
+
+**Assets typically needed for this event:**
 - 1 primary flyer
 - a small set of social assets (speaker spotlight, announcement, teaser, reminder)
 - consistent use of CBHN + Covered CA logos
@@ -160,8 +164,119 @@ When asked to create CBHN assets:
 ### Event positioning sentence (template)
 “CBHN is convening this forum to help Black Californians and other vulnerable communities understand what’s changing, what to expect next, and how to stay covered—while creating space for questions, clarity, and advocacy.”
 
+
 ### CTAs (template)
 - “Register to attend”
 - “Save your seat”
 - “Join the live discussion”
 - “Get informed. Prepare for changes. Advocate for your health.”
+
+---
+
+## About this App & Repository Structure
+
+This web app serves as a central project repository for CBHN (California Black Health Network) deliverables. It is designed to:
+
+- **Store and showcase all CBHN-related projects** (event pages, sponsorship decks, reports, flyers, etc.) in one place for easy access and reuse.
+- **Maintain consistent branding and design** across all assets, so new requests can be fulfilled quickly without starting from scratch.
+- **Enable rapid creation of new subpages** for each new CBHN project, campaign, or event, leveraging shared components, styles, and context.
+- **Act as a living archive** of past and current CBHN work, making it easy to reference, update, or repurpose materials as needed.
+
+This approach ensures that every new CBHN request (web page, flyer, report, etc.) can be delivered efficiently, with professional consistency and full context of prior work.
+
+---
+
+## Technical Best Practices — Static Project HTML Files
+
+### Context: how static projects are served
+- The Vite app has `base: '/cbhn-playground/'` in `vite.config.ts`.
+- Static HTML projects live at `public/projects/<slug>/index.html`.
+- They are served inside a full-page `<iframe>` by `src/pages/StaticProject.tsx`.
+- The PDF export script (`scripts/export_pdf.py`) runs a local Python HTTP server from `public/` and uses Playwright to render the page.
+
+### Image & asset paths — always use relative paths
+**Never use absolute paths like `/images/...` or `/styles/...`** in static project HTML files. Absolute paths break under Vite's `/cbhn-playground/` base and may also break the PDF export server.
+
+Always use relative paths from the file's own location:
+
+```html
+<!-- From public/projects/<slug>/index.html -->
+<img src="../../images/cbhn-logo.png" ...>
+<link rel="stylesheet" href="../../styles/main.css">
+```
+
+In React source files (`src/`), use `import.meta.env.BASE_URL` to prefix public asset paths:
+
+```tsx
+<img src={`${import.meta.env.BASE_URL}images/cbhn-logo.png`} />
+```
+
+### Known image assets (`public/images/`)
+```
+cbhn-logo.png
+cbhn-white.png
+cbhn-image-background.png
+cbhn-image-1.png
+qr-code.png
+zoom-fondo-blanco-vertical-logo-png_seeklogo-381383.png
+headshots/
+  Curley Bonds.jpeg
+  LCHarvey.png
+  TinaArmstrong headshot.jpg
+  Dr.MonicaPhoto (1) (1).jpg
+  KBHeadshot.png
+  George Woods_7280-Crop.jpeg
+  Photo-Shacunda Rodgers PhD.jpeg
+  Jamila Jabulani.jpeg
+```
+
+### Fixed dimensions — no responsive scaling
+Static project pages are **print/export artifacts**, not responsive web pages. They must be locked to exact dimensions at all times so they render correctly in the iframe viewer and in PDF export.
+
+**Rules:**
+1. Set the viewport meta to the pixel-equivalent of the fixed width (not `device-width`).
+2. Apply `min-width`, `max-width`, `min-height`, `max-height`, and `flex-shrink: 0` on the root page element.
+3. Remove any `@media` queries that scale or resize the layout.
+4. The viewer iframe will show scrollbars if the content is larger than the viewport — this is intentional.
+
+**Per-project dimensions and viewport meta:**
+
+| Project | Container class | Dimensions | Viewport meta |
+|---|---|---|---|
+| `sponsorship-package` | `.page` | 210mm × 297mm (A4) | `width=794` |
+| `registration-flyer` | `.flyer-page` | 210mm × 297mm (A4) | `width=794` |
+| `zoom-landing-page` | `.zoom-graphic` | 1920px × 1080px | `width=1920` |
+
+**A4 page CSS pattern:**
+```css
+.page, .flyer-page {
+    width: 210mm;
+    min-width: 210mm;
+    max-width: 210mm;
+    height: 297mm;
+    min-height: 297mm;
+    max-height: 297mm;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+```
+
+**1920×1080 CSS pattern:**
+```css
+.zoom-graphic {
+    width: 1920px;
+    min-width: 1920px;
+    max-width: 1920px;
+    height: 1080px;
+    min-height: 1080px;
+    max-height: 1080px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+```
+
+### PDF export
+- Script: `scripts/export_pdf.py`
+- Uses Playwright + Chromium, targets `http://localhost:8000` (Python HTTP server from `public/`)
+- Exports with `format='A4'`, zero margins, `print_background=True`, `prefer_css_page_size=True`
+- Run from the `public/` directory so relative paths resolve correctly

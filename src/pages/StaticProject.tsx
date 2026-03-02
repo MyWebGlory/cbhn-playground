@@ -36,7 +36,7 @@ export default function StaticProject() {
 
       {/* Full-page iframe */}
       <iframe
-        src={`/projects/${slug}/index.html`}
+        src={`${import.meta.env.BASE_URL}projects/${slug}/index.html`}
         title={project.title}
         className="flex-1 w-full border-none"
         style={{ minHeight: 'calc(100vh - 40px)' }}

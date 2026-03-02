@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1920">
     <title>CBHN Conference - Zoom Landing Page</title>
     
     <!-- Google Fonts -->
@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="../../styles/main.css">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -42,29 +42,20 @@
         body {
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
             background: #1a1a1a;
         }
         
         .zoom-graphic {
             width: 1920px;
+            min-width: 1920px;
+            max-width: 1920px;
             height: 1080px;
+            min-height: 1080px;
+            max-height: 1080px;
             position: relative;
             overflow: hidden;
             background: #003687;
-        }
-        
-        @media screen and (max-width: 1920px) {
-            .zoom-graphic {
-                transform-origin: top left;
-                transform: scale(calc(100vw / 1920));
-            }
-            body {
-                align-items: flex-start;
-            }
+            flex-shrink: 0;
         }
     </style>
 </head>
@@ -74,7 +65,7 @@
     <div class="zoom-graphic">
         
         <!-- Background Image -->
-        <img src="/images/cbhn-image-background.png" alt="Black community members" class="absolute inset-0 w-full h-full object-cover object-center">
+        <img src="../../images/cbhn-image-background.png" alt="Black community members" class="absolute inset-0 w-full h-full object-cover object-center">
         
         <!-- Dark Gradient Overlay -->
         <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(0,54,135,0.85) 0%, rgba(0,54,135,0.6) 40%, rgba(0,0,0,0.4) 100%);"></div>
@@ -103,7 +94,7 @@
                 <!-- CBHN Logo -->
                 <div class="mb-12">
                     <div class="inline-block bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                        <img src="/images/cbhn-white.png" alt="CBHN Logo" class="h-28 w-auto">
+                        <img src="../../images/cbhn-white.png" alt="CBHN Logo" class="h-28 w-auto">
                     </div>
                 </div>
                 
