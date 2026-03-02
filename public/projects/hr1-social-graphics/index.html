@@ -89,352 +89,320 @@
            CARD 1, Speaker Spotlight
            ======================================== */
         .card-1 {
-            background: linear-gradient(165deg, #001845 0%, #002a6e 30%, #003a94 65%, #004dbf 100%);
+            background: linear-gradient(165deg, #001030 0%, #001845 30%, #002a6e 65%, #003a94 100%);
         }
-        /* Decorative orbs */
         .card-1 .orb-1 {
-            position: absolute;
-            top: -120px; right: -80px;
-            width: 520px; height: 520px;
-            border-radius: 50%;
-            background: radial-gradient(circle at 40% 40%, rgba(54,201,138,0.25), transparent 65%);
+            position: absolute; top: -100px; right: -80px;
+            width: 500px; height: 500px; border-radius: 50%;
+            background: radial-gradient(circle at 40% 40%, rgba(54,201,138,0.22), transparent 65%);
         }
         .card-1 .orb-2 {
-            position: absolute;
-            bottom: -100px; left: -100px;
-            width: 450px; height: 450px;
-            border-radius: 50%;
-            background: radial-gradient(circle at 60% 60%, rgba(255,214,0,0.15), transparent 65%);
+            position: absolute; bottom: -80px; left: -80px;
+            width: 420px; height: 420px; border-radius: 50%;
+            background: radial-gradient(circle at 60% 60%, rgba(255,214,0,0.12), transparent 65%);
         }
         .card-1 .orb-3 {
-            position: absolute;
-            top: 350px; left: -60px;
-            width: 300px; height: 300px;
-            border-radius: 50%;
+            position: absolute; top: 460px; right: -40px;
+            width: 280px; height: 280px; border-radius: 50%;
             background: radial-gradient(circle, rgba(252,3,103,0.1), transparent 60%);
-        }
-        /* Geometric lines */
-        .card-1 .geo-line-1 {
-            position: absolute;
-            top: 80px; right: 60px;
-            width: 180px; height: 2px;
-            background: linear-gradient(90deg, transparent, rgba(54,201,138,0.5), transparent);
-        }
-        .card-1 .geo-line-2 {
-            position: absolute;
-            bottom: 200px; left: 50px;
-            width: 120px; height: 2px;
-            background: linear-gradient(90deg, transparent, rgba(255,214,0,0.4), transparent);
         }
         /* Top bar */
         .card-1 .top-bar {
-            height: 8px;
-            background: linear-gradient(90deg, #36c98a, #ffd600, #ff5a1f, #fc0367);
-            flex-shrink: 0;
+            height: 10px; flex-shrink: 0;
+            background: linear-gradient(90deg, #36c98a, #00c3f3, #003687, #fc0367, #ff5a1f, #ffd600);
         }
-        /* Header zone */
+        /* Header */
         .card-1 .header-zone {
-            padding: 40px 64px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            z-index: 3;
-            flex-shrink: 0;
+            padding: 38px 72px 0;
+            display: flex; justify-content: space-between; align-items: center;
+            position: relative; z-index: 3; flex-shrink: 0;
         }
-        .card-1 .header-zone img { height: 40px; }
+        .card-1 .header-zone img { height: 58px; }
         .card-1 .pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(54,201,138,0.15);
-            border: 1.5px solid rgba(54,201,138,0.45);
-            color: #36c98a;
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            padding: 8px 20px;
-            border-radius: 99px;
+            display: inline-flex; align-items: center; gap: 12px;
+            background: rgba(201, 132, 54, 0.15); border: 2px solid rgba(201, 120, 54, 0.45);
+            color: #c98236; font-size: 20px; font-weight: 800;
+            letter-spacing: 0.14em; text-transform: uppercase;
+            padding: 12px 26px; border-radius: 99px;
         }
-        .card-1 .pill svg { width: 16px; height: 16px; }
-        /* Photo section */
-        .card-1 .photo-zone {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            z-index: 3;
-            padding: 0 64px;
+        .card-1 .pill svg { width: 24px; height: 24px; }
+        /* Hero row: photo + identity */
+        .card-1 .hero-row {
+            display: flex; align-items: center; gap: 44px;
+            padding: 32px 72px 26px; position: relative; z-index: 3; flex-shrink: 0;
         }
+        .card-1 .photo-col { flex-shrink: 0; }
         .card-1 .photo-ring {
-            width: 340px; height: 340px;
-            border-radius: 50%;
-            padding: 6px;
-            background: linear-gradient(135deg, #36c98a, #ffd600, #ff5a1f);
-            margin-bottom: 36px;
+            width: 310px; height: 310px; border-radius: 50%; padding: 6px; flex-shrink: 0;
+            background: linear-gradient(135deg, #36c98a 0%, #00c3f3 40%, #ffd600 100%);
         }
-        .card-1 .photo-ring img,
-        .card-1 .photo-ring .ph {
-            width: 100%; height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: top center;
-            display: block;
+        .card-1 .photo-ring img {
+            width: 100%; height: 100%; border-radius: 50%;
+            object-fit: cover; object-position: top center; display: block;
         }
-        .card-1 .photo-ring .ph {
-            background: linear-gradient(135deg, #003a94, #002055);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255,255,255,0.35);
-            font-size: 16px;
-            font-weight: 700;
-            text-align: center;
+        .card-1 .identity-col {
+            flex: 1; display: flex; flex-direction: column;
         }
-        /* Speaker info */
-        .card-1 .speaker-info {
-            text-align: center;
-            position: relative;
-            z-index: 3;
+        .card-1 .spk-eyebrow {
+            font-size: 17px; font-weight: 800; letter-spacing: 0.22em;
+            text-transform: uppercase; color: #36c98a; margin-bottom: 10px;
         }
-        .card-1 .speaker-name {
+        .card-1 .spk-name {
             font-family: 'Playfair Display', serif;
-            font-size: 52px;
-            font-weight: 800;
-            color: #fff;
-            line-height: 1.1;
-            margin-bottom: 12px;
+            font-size: 58px; font-weight: 800; color: #fff;
+            line-height: 1.05; margin-bottom: 10px;
         }
-        .card-1 .speaker-role {
-            font-size: 22px;
-            font-weight: 700;
-            color: #36c98a;
-            margin-bottom: 4px;
+        .card-1 .spk-role {
+            font-size: 26px; font-weight: 700; color: #36c98a; margin-bottom: 4px;
         }
-        .card-1 .speaker-org {
-            font-size: 20px;
-            font-weight: 500;
-            color: rgba(255,255,255,0.65);
-            margin-bottom: 32px;
+        .card-1 .spk-org {
+            font-size: 22px; font-weight: 500; color: rgba(255,255,255,0.55); margin-bottom: 18px;
         }
-        /* Bottom info bar */
-        .card-1 .bottom-zone {
+        .card-1 .spk-rule {
+            width: 56px; height: 3px;
+            background: linear-gradient(90deg, #36c98a, transparent);
+            margin-bottom: 18px;
+        }
+        .card-1 .spk-bio {
+            font-size: 20px; color: rgba(255,255,255,0.72); line-height: 1.65; margin-bottom: 20px;
+        }
+        .card-1 .spk-tags {
+            display: flex; flex-wrap: wrap; gap: 10px;
+        }
+        .card-1 .spk-tag {
+            font-size: 18px; font-weight: 800; letter-spacing: 0.05em;
+            padding: 8px 18px; border-radius: 99px;
+        }
+        .card-1 .tag-green  { background: rgba(54,201,138,0.18); border: 1.5px solid rgba(54,201,138,0.5); color: #36c98a; }
+        .card-1 .tag-sky    { background: rgba(0,195,243,0.14);  border: 1.5px solid rgba(0,195,243,0.45);  color: #00c3f3; }
+        .card-1 .tag-gold   { background: rgba(255,214,0,0.14);  border: 1.5px solid rgba(255,214,0,0.4);   color: #ffd600; }
+        .card-1 .tag-magenta{ background: rgba(252,3,103,0.14);  border: 1.5px solid rgba(252,3,103,0.4);   color: #fc0367; }
+        /* Topics section */
+        .card-1 .topics-section {
+            position: relative; z-index: 3;
+            padding: 0 72px 24px; flex-shrink: 0;
+        }
+        .card-1 .topics-header {
+            display: flex; align-items: center; gap: 16px; margin-bottom: 16px;
+        }
+        .card-1 .topics-label {
+            font-size: 17px; font-weight: 800; letter-spacing: 0.20em;
+            text-transform: uppercase; color: rgba(255,255,255,0.36); white-space: nowrap;
+        }
+        .card-1 .topics-rule {
+            flex: 1; height: 1px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.12), transparent);
+        }
+        .card-1 .topics-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+        }
+        .card-1 .topic-item {
+            display: flex; align-items: center; gap: 14px;
+            background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 14px; padding: 16px 20px;
+        }
+        .card-1 .topic-dot {
+            width: 28px; height: 28px; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .card-1 .topic-dot svg { width: 22px; height: 22px; }
+        .card-1 .topic-text {
+            font-size: 22px; font-weight: 600; color: rgba(255,255,255,0.85); line-height: 1.25;
+        }
+        /* Event info bar */
+        .card-1 .event-bar {
             background: rgba(0,0,0,0.35);
-            padding: 28px 64px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-            z-index: 3;
-            flex-shrink: 0;
+            padding: 24px 72px;
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: space-between;
+            position: relative; z-index: 3; flex-shrink: 0;
         }
-        .card-1 .info-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .card-1 .ev-item { display: flex; align-items: center; gap: 14px; }
+        .card-1 .ev-icon {
+            width: 52px; height: 52px; border-radius: 13px;
+            background: rgba(54,201,138,0.18);
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
         }
-        .card-1 .info-icon {
-            width: 44px; height: 44px;
-            border-radius: 12px;
-            background: rgba(54,201,138,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
+        .card-1 .ev-icon svg { width: 28px; height: 28px; color: #36c98a; }
+        .card-1 .ev-label {
+            font-size: 17px; font-weight: 700; letter-spacing: 0.1em;
+            text-transform: uppercase; color: rgba(255,255,255,0.4);
         }
-        .card-1 .info-icon svg { width: 22px; height: 22px; color: #36c98a; }
-        .card-1 .info-label {
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.45);
+        .card-1 .ev-value {
+            font-size: 26px; font-weight: 700; color: #fff;
         }
-        .card-1 .info-value {
-            font-size: 16px;
-            font-weight: 700;
-            color: #fff;
-        }
-        /* Footer logos */
+        /* Footer */
         .card-1 .footer-zone {
-            padding: 20px 64px 28px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-            z-index: 3;
-            flex-shrink: 0;
+            padding: 18px 72px 26px;
+            display: flex; align-items: center; justify-content: space-between;
+            position: relative; z-index: 3; flex-shrink: 0;
         }
-        .card-1 .logo-row {
-            display: flex; align-items: center; gap: 16px;
-        }
-        .card-1 .logo-row img { height: 34px; }
-        .card-1 .logo-sep {
-            width: 1.5px; height: 26px;
-            background: rgba(255,255,255,0.25);
-        }
-        .card-1 .covered-text {
-            font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.55);
-        }
-        .card-1 .forum-label {
-            font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
-            text-transform: uppercase; color: rgba(255,255,255,0.35);
-        }
-        /* Bottom accent */
+        .card-1 .logo-row { display: flex; align-items: center; gap: 18px; }
+        .card-1 .logo-row img { height: 46px; }
+        .card-1 .logo-sep { width: 2px; height: 30px; background: rgba(255,255,255,0.2); }
+        .card-1 .covered-text { font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.5); }
+        .card-1 .forum-label { font-size: 19px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+        /* Bottom bar */
         .card-1 .btm-bar {
-            height: 8px;
-            background: linear-gradient(90deg, #fc0367, #ff5a1f, #ffd600, #36c98a);
-            flex-shrink: 0;
+            height: 8px; flex-shrink: 0;
+            background: linear-gradient(90deg, #ffd600, #ff5a1f, #fc0367, #003687, #36c98a);
         }
 
         /* ========================================
            CARD 2, Event Announcement
            ======================================== */
         .card-2 {
-            background: #fff;
+            background: #001030;
         }
+        /* Full-bleed background image */
+        .card-2 .bg-photo {
+            position: absolute; inset: 0; z-index: 0;
+            background: url('../../images/hr1-forum-main-image.png') center 20% / cover no-repeat;
+        }
+        /* Multi-layer overlay: darken left/bottom for text, keep center warm */
+        .card-2 .bg-overlay {
+            position: absolute; inset: 0; z-index: 1;
+            background:
+                linear-gradient(to bottom, rgba(0,8,30,0.55) 0%, rgba(0,8,30,0.25) 35%, rgba(0,8,30,0.70) 65%, rgba(0,8,30,0.95) 100%),
+                linear-gradient(to right, rgba(0,8,30,0.65) 0%, rgba(0,8,30,0.15) 55%, rgba(0,8,30,0.05) 100%);
+        }
+        /* Rainbow top bar */
+        .card-2 .top-bar {
+            position: relative; z-index: 10; flex-shrink: 0;
+            height: 10px;
+            background: linear-gradient(90deg, #36c98a 0%, #00c3f3 22%, #003687 40%, #fc0367 58%, #f14916 75%, #ffd600 100%);
+        }
+        /* Header row */
         .card-2 .top-gradient {
-            height: 540px;
             flex-shrink: 0;
-            background: linear-gradient(160deg, #001845, #002a6e 40%, #003a94 75%, #36c98a 100%);
-            position: relative;
-            overflow: hidden;
+            position: relative; z-index: 5;
             display: flex;
             flex-direction: column;
-            padding: 44px 64px;
-        }
-        .card-2 .top-gradient .shape-1 {
-            position: absolute;
-            top: -80px; right: -80px;
-            width: 400px; height: 400px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255,214,0,0.2), transparent 65%);
-        }
-        .card-2 .top-gradient .shape-2 {
-            position: absolute;
-            bottom: -60px; left: 30%;
-            width: 280px; height: 280px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(252,3,103,0.12), transparent 60%);
-        }
-        .card-2 .top-gradient .shape-3 {
-            position: absolute;
-            top: 50%; left: -40px;
-            width: 200px; height: 200px;
-            border: 3px solid rgba(255,255,255,0.06);
-            border-radius: 50%;
-        }
-        .card-2 .top-gradient .diag-stripe {
-            position: absolute;
-            bottom: 0; right: 0;
-            width: 300px; height: 100%;
-            background: linear-gradient(200deg, rgba(54,201,138,0.15), transparent 50%);
+            padding: 48px 72px 0;
+            background: none;
+            height: auto;
+            overflow: visible;
         }
         .card-2 .top-row {
             display: flex; align-items: center; justify-content: space-between;
-            margin-bottom: 32px;
+            margin-bottom: 0;
             position: relative; z-index: 2;
         }
-        .card-2 .top-row img { height: 38px; }
+        .card-2 .top-row img { height: 64px; }
         .card-2 .top-pill {
-            display: inline-flex; align-items: center; gap: 7px;
-            background: rgba(255,255,255,0.12);
-            border: 1.5px solid rgba(255,255,255,0.25);
-            color: #fff;
-            font-size: 11px; font-weight: 800;
-            letter-spacing: 0.13em;
+            display: inline-flex; align-items: center; gap: 12px;
+            background: rgba(54,201,138,0.18);
+            border: 2px solid rgba(54,201,138,0.55);
+            color: #36c98a;
+            font-size: 22px; font-weight: 800;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
-            padding: 8px 18px;
+            padding: 14px 26px;
             border-radius: 99px;
         }
-        .card-2 .top-pill svg { width: 15px; height: 15px; }
+        .card-2 .top-pill svg { width: 26px; height: 26px; }
+        /* Spacer to push title toward middle */
+        .card-2 .hero-spacer { flex: 1; min-height: 80px; }
+        /* Title block, sits over the image center */
         .card-2 .title-area {
-            flex: 1;
+            position: relative; z-index: 5;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            position: relative; z-index: 2;
+            padding: 0 72px;
+            flex-shrink: 0;
         }
         .card-2 .title-area .forum-tag {
-            font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+            font-size: 24px; font-weight: 700; letter-spacing: 0.14em;
             text-transform: uppercase; color: #ffd600;
-            margin-bottom: 14px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.6);
         }
         .card-2 .title-area h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 44px; font-weight: 800;
+            font-size: 80px; font-weight: 800;
             color: #fff;
-            line-height: 1.18;
+            line-height: 1.08;
             margin: 0;
+            text-shadow: 0 4px 24px rgba(0,0,0,0.7);
         }
-        /* Main content area */
+        .card-2 .title-rule {
+            width: 80px; height: 4px;
+            background: linear-gradient(90deg, #36c98a, transparent);
+            margin: 24px 0 0;
+        }
+        /* Content area, glass over image bottom */
         .card-2 .content-area {
             flex: 1;
+            position: relative; z-index: 5;
             display: flex;
             flex-direction: column;
-            padding: 44px 64px 32px;
+            padding: 36px 72px 28px;
         }
         .card-2 .desc-text {
-            font-size: 20px;
-            color: #374151;
-            line-height: 1.6;
+            font-size: 30px;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.55;
             margin-bottom: 28px;
+            text-shadow: 0 1px 8px rgba(0,0,0,0.5);
         }
         /* Detail chips */
         .card-2 .detail-row {
             display: flex;
             flex-direction: column;
-            gap: 14px;
-            margin-bottom: 36px;
+            gap: 16px;
+            margin-bottom: 28px;
         }
         .card-2 .detail-chip {
             display: flex;
             align-items: center;
-            gap: 14px;
-            background: #f0f5ff;
-            border-radius: 14px;
-            padding: 16px 22px;
+            gap: 20px;
+            background: rgba(255,255,255,0.10);
+            border: 1.5px solid rgba(255,255,255,0.18);
+            border-radius: 18px;
+            padding: 15px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
         .card-2 .chip-icon {
-            width: 44px; height: 44px;
-            border-radius: 12px;
-            background: #003687;
+            width: 50px; height: 50px;
+            border-radius: 16px;
+            background: rgba(54,201,138,0.25);
+            border: 1.5px solid rgba(54,201,138,0.4);
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
         }
-        .card-2 .chip-icon svg { width: 22px; height: 22px; color: #fff; }
+        .card-2 .chip-icon svg { width: 25px; height: 25px; color: #36c98a; }
         .card-2 .chip-text {
-            font-size: 17px; font-weight: 700; color: #003687;
+            font-size: 28px; font-weight: 700; color: #fff;
         }
         /* CTA */
         .card-2 .cta-row {
             margin-top: auto;
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 24px;
         }
         .card-2 .cta-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #003687, #004db3);
-            color: #fff;
-            font-size: 18px; font-weight: 800;
-            padding: 18px 36px;
-            border-radius: 14px;
+            background: linear-gradient(135deg, #36c98a 0%, #00c3f3 100%);
+            color: #001830;
+            font-size: 32px; font-weight: 800;
+            padding: 28px 56px;
+            border-radius: 18px;
             text-decoration: none;
+            box-shadow: 0 8px 32px rgba(54,201,138,0.45);
         }
         .card-2 .cta-sub {
-            font-size: 14px; font-weight: 600; color: #6b7280;
+            font-size: 24px; font-weight: 600; color: rgba(255,255,255,0.55);
         }
         /* Bottom bar */
         .card-2 .btm-bar {
-            height: 8px;
+            height: 10px;
             flex-shrink: 0;
-            background: linear-gradient(90deg, #003687, #36c98a, #ffd600, #ff5a1f, #fc0367);
+            position: relative; z-index: 5;
+            background: linear-gradient(90deg, #36c98a, #00c3f3, #ffd600, #ff5a1f, #fc0367);
         }
 
         /* ========================================
@@ -502,37 +470,37 @@
             height: 100%;
         }
         .card-3 .top-logos {
-            display: flex; align-items: center; gap: 16px;
-            margin-bottom: 40px;
+            display: flex; align-items: center; gap: 22px;
+            margin-bottom: 44px;
         }
-        .card-3 .top-logos img { height: 34px; }
-        .card-3 .top-logos .sep { width: 1.5px; height: 24px; background: rgba(255,255,255,0.2); }
-        .card-3 .top-logos span { font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.45); }
+        .card-3 .top-logos img { height: 58px; }
+        .card-3 .top-logos .sep { width: 2px; height: 38px; background: rgba(255,255,255,0.2); }
+        .card-3 .top-logos span { font-size: 26px; font-weight: 700; color: rgba(255,255,255,0.45); }
         .card-3 .pill {
-            display: inline-flex; align-items: center; gap: 8px;
+            display: inline-flex; align-items: center; gap: 12px;
             background: rgba(54,201,138,0.12);
-            border: 1.5px solid rgba(54,201,138,0.35);
+            border: 2px solid rgba(54,201,138,0.35);
             color: #36c98a;
-            font-size: 13px; font-weight: 800;
-            letter-spacing: 0.14em;
+            font-size: 24px; font-weight: 800;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
-            padding: 10px 22px;
+            padding: 16px 32px;
             border-radius: 99px;
-            margin-bottom: 48px;
+            margin-bottom: 44px;
         }
-        .card-3 .pill svg { width: 16px; height: 16px; }
+        .card-3 .pill svg { width: 28px; height: 28px; }
         .card-3 .pre-title {
-            font-size: 15px; font-weight: 700; letter-spacing: 0.18em;
+            font-size: 24px; font-weight: 700; letter-spacing: 0.16em;
             text-transform: uppercase;
             color: rgba(255,255,255,0.4);
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
         .card-3 .main-title {
             font-family: 'Playfair Display', serif;
-            font-size: 72px;
+            font-size: 104px;
             font-weight: 800;
             line-height: 1.05;
-            margin-bottom: 24px;
+            margin-bottom: 32px;
         }
         .card-3 .main-title .w1 { color: #fff; }
         .card-3 .main-title .w2 {
@@ -545,45 +513,45 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 12px 20px;
-            margin-bottom: 48px;
+            gap: 16px 24px;
+            margin-bottom: 44px;
         }
         .card-3 .bullet {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 14px;
             background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 10px;
-            padding: 12px 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 20px 30px;
         }
-        .card-3 .bullet svg { width: 18px; height: 18px; flex-shrink: 0; }
-        .card-3 .bullet span { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.8); }
+        .card-3 .bullet svg { width: 32px; height: 32px; flex-shrink: 0; }
+        .card-3 .bullet span { font-size: 28px; font-weight: 600; color: rgba(255,255,255,0.8); }
         .card-3 .date-strip {
             background: rgba(255,255,255,0.08);
             border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 16px;
-            padding: 20px 36px;
+            border-radius: 20px;
+            padding: 28px 48px;
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 32px;
             margin-bottom: 44px;
         }
         .card-3 .date-strip .ds-item {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 14px;
         }
-        .card-3 .date-strip svg { width: 20px; height: 20px; color: #36c98a; }
-        .card-3 .date-strip span { font-size: 18px; font-weight: 700; color: #fff; }
-        .card-3 .date-strip .ds-sep { width: 1px; height: 24px; background: rgba(255,255,255,0.15); }
+        .card-3 .date-strip svg { width: 34px; height: 34px; color: #36c98a; }
+        .card-3 .date-strip span { font-size: 34px; font-weight: 700; color: #fff; }
+        .card-3 .date-strip .ds-sep { width: 2px; height: 36px; background: rgba(255,255,255,0.15); }
         .card-3 .cta-btn {
             display: inline-block;
             background: linear-gradient(135deg, #36c98a, #00c3f3);
             color: #001845;
-            font-size: 20px; font-weight: 800;
-            padding: 20px 44px;
-            border-radius: 14px;
+            font-size: 34px; font-weight: 800;
+            padding: 28px 64px;
+            border-radius: 18px;
             text-decoration: none;
         }
         .card-3 .btm-bar {
@@ -652,28 +620,28 @@
         }
         /* Top section */
         .card-4 .top-section {
-            padding: 44px 64px 0;
+            padding: 52px 72px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-shrink: 0;
         }
-        .card-4 .top-section .logo-row { display: flex; align-items: center; gap: 16px; }
-        .card-4 .top-section img { height: 38px; }
-        .card-4 .top-section .sep { width: 1.5px; height: 26px; background: rgba(255,255,255,0.2); }
-        .card-4 .top-section .covered { font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.5); }
+        .card-4 .top-section .logo-row { display: flex; align-items: center; gap: 20px; }
+        .card-4 .top-section img { height: 64px; }
+        .card-4 .top-section .sep { width: 2px; height: 40px; background: rgba(255,255,255,0.2); }
+        .card-4 .top-section .covered { font-size: 26px; font-weight: 700; color: rgba(255,255,255,0.5); }
         .card-4 .urgency-pill {
-            display: inline-flex; align-items: center; gap: 8px;
+            display: inline-flex; align-items: center; gap: 12px;
             background: rgba(255,90,31,0.2);
-            border: 1.5px solid rgba(255,90,31,0.5);
+            border: 2px solid rgba(255,90,31,0.5);
             color: #ff5a1f;
-            font-size: 13px; font-weight: 800;
-            letter-spacing: 0.12em;
+            font-size: 24px; font-weight: 800;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
-            padding: 10px 22px;
+            padding: 16px 30px;
             border-radius: 99px;
         }
-        .card-4 .urgency-pill svg { width: 16px; height: 16px; }
+        .card-4 .urgency-pill svg { width: 28px; height: 28px; }
         /* Center content */
         .card-4 .center {
             flex: 1;
@@ -685,34 +653,34 @@
             text-align: center;
         }
         .card-4 .big-date {
-            font-size: 18px;
+            font-size: 34px;
             font-weight: 800;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.16em;
             text-transform: uppercase;
             color: #ffd600;
-            margin-bottom: 20px;
+            margin-bottom: 28px;
         }
         .card-4 .main-headline {
             font-family: 'Playfair Display', serif;
-            font-size: 68px;
+            font-size: 108px;
             font-weight: 800;
             color: #fff;
             line-height: 1.05;
-            margin-bottom: 28px;
+            margin-bottom: 36px;
         }
         .card-4 .subtitle {
-            font-size: 22px;
+            font-size: 38px;
             font-weight: 600;
             color: rgba(255,255,255,0.7);
-            line-height: 1.5;
-            max-width: 800px;
-            margin-bottom: 24px;
+            line-height: 1.45;
+            max-width: 900px;
+            margin-bottom: 30px;
         }
         .card-4 .speaker-line {
-            font-size: 17px;
+            font-size: 30px;
             font-weight: 600;
             color: rgba(255,255,255,0.5);
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
         .card-4 .speaker-line strong { color: #36c98a; font-weight: 700; }
         /* CTA section */
@@ -726,31 +694,32 @@
             display: inline-block;
             background: linear-gradient(135deg, #36c98a, #00c3f3);
             color: #001845;
-            font-size: 22px; font-weight: 800;
-            padding: 22px 52px;
-            border-radius: 16px;
+            font-size: 38px; font-weight: 800;
+            padding: 32px 72px;
+            border-radius: 20px;
             text-decoration: none;
         }
         .card-4 .cta-free {
-            font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.4);
+            font-size: 26px; font-weight: 700; color: rgba(255,255,255,0.4);
             letter-spacing: 0.06em;
         }
         /* Bottom detail bar */
         .card-4 .bottom-bar {
             flex-shrink: 0;
             background: rgba(0,0,0,0.3);
-            padding: 22px 64px;
+            padding: 32px 72px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 28px;
+            gap: 40px;
+            border-radius: 14px;
         }
         .card-4 .bb-item {
-            display: flex; align-items: center; gap: 10px;
+            display: flex; align-items: center; gap: 16px;
         }
-        .card-4 .bb-item svg { width: 20px; height: 20px; color: #36c98a; }
-        .card-4 .bb-item span { font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.8); }
-        .card-4 .bb-sep { width: 1px; height: 22px; background: rgba(255,255,255,0.15); }
+        .card-4 .bb-item svg { width: 34px; height: 34px; color: #36c98a; }
+        .card-4 .bb-item span { font-size: 28px; font-weight: 700; color: rgba(255,255,255,0.8); }
+        .card-4 .bb-sep { width: 2px; height: 36px; background: rgba(255,255,255,0.15); }
         .card-4 .btm-bar {
             height: 8px;
             background: linear-gradient(90deg, #36c98a, #ffd600, #ff5a1f, #fc0367, #003687);
@@ -768,14 +737,10 @@
     <span class="graphic-label-size">1080 × 1350 px, IG · FB · LinkedIn (vertical)</span>
 </div>
 <div class="card card-1">
-    <!-- Decorative background -->
     <div class="orb-1"></div>
     <div class="orb-2"></div>
     <div class="orb-3"></div>
-    <div class="geo-line-1"></div>
-    <div class="geo-line-2"></div>
 
-    <!-- Top gradient bar -->
     <div class="top-bar"></div>
 
     <!-- Header -->
@@ -783,58 +748,111 @@
         <img src="../../images/cbhn-white.png" alt="CBHN" />
         <div class="pill">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" /></svg>
-            Featured Speaker
+            She's Speaking!
         </div>
     </div>
 
-    <!-- Photo -->
-    <div class="photo-zone">
-        <div class="photo-ring">
-            <!--
-                SWAP IN HEADSHOT:
-                <img src="../../images/headshots/DrMonicaSoni.jpg" alt="Dr. Monica Soni" />
-            -->
-            <div class="ph">Photo<br>Pending</div>
+    <!-- Photo + Identity -->
+    <div class="hero-row">
+        <div class="photo-col">
+            <div class="photo-ring">
+                <img src="../../images/headshots/monica-soni.png" alt="Dr. Monica Soni" />
+            </div>
         </div>
-        <div class="speaker-info">
-            <div class="speaker-name">Dr. Monica Soni</div>
-            <div class="speaker-role">Chief Medical Officer</div>
-            <div class="speaker-org">Covered California</div>
+        <div class="identity-col">
+            <div class="spk-eyebrow">Featured Speaker</div>
+            <div class="spk-name">Dr. Monica<br>Soni</div>
+            <div class="spk-role">Chief Medical Officer</div>
+            <div class="spk-org">Covered California</div>
+            <div class="spk-rule"></div>
+            <div class="spk-bio">A Harvard-trained internist and &ldquo;agitator for change,&rdquo; Dr. Soni has spent two decades at the crossroads of medicine, social justice, and health policy.</div>
+            <div class="spk-tags">
+                <span class="spk-tag tag-green">Harvard Med</span>
+                <span class="spk-tag tag-sky">UCLA Faculty</span>
+                <span class="spk-tag tag-gold">Health Equity</span>
+                <span class="spk-tag tag-magenta">Internal Medicine</span>
+            </div>
         </div>
     </div>
 
-    <!-- Bottom info stripe -->
-    <div class="bottom-zone">
-        <div class="info-item">
-            <div class="info-icon">
+    <!-- What We'll Cover -->
+    <div class="topics-section">
+        <div class="topics-header">
+            <span class="topics-label">What We'll Cover</span>
+            <div class="topics-rule"></div>
+        </div>
+        <div class="topics-grid">
+            <div class="topic-item">
+                <div class="topic-dot">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#f14916" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                </div>
+                <div class="topic-text">Rising Healthcare Costs</div>
+            </div>
+            <div class="topic-item">
+                <div class="topic-dot">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#00c3f3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                </div>
+                <div class="topic-text">Shifts in Coverage &amp; Eligibility</div>
+            </div>
+            <div class="topic-item">
+                <div class="topic-dot">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#c8922a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <div class="topic-text">What to Expect in 2026-27</div>
+            </div>
+            <div class="topic-item">
+                <div class="topic-dot">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#36c98a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <div class="topic-text">Medicaid &amp; Medi-Cal Impacts</div>
+            </div>
+            <div class="topic-item">
+                <div class="topic-dot">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fc0367" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="topic-text">Impact on Black Californians</div>
+            </div>
+            <div class="topic-item">
+                <div class="topic-dot">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#4a7fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="topic-text">Protecting Your Coverage</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Event bar -->
+    <div class="event-bar">
+        <div class="ev-item">
+            <div class="ev-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
             </div>
             <div>
-                <div class="info-label">Date</div>
-                <div class="info-value">March 26, 2026</div>
+                <div class="ev-label">Join Us</div>
+                <div class="ev-value">March 26, 2026</div>
             </div>
         </div>
-        <div class="info-item">
-            <div class="info-icon">
+        <div class="ev-item">
+            <div class="ev-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             </div>
             <div>
-                <div class="info-label">Time</div>
-                <div class="info-value">12 – 1 PM PT</div>
+                <div class="ev-label">We Start At</div>
+                <div class="ev-value">12-1 PM PT</div>
             </div>
         </div>
-        <div class="info-item">
-            <div class="info-icon">
+        <div class="ev-item">
+            <div class="ev-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z" /></svg>
             </div>
             <div>
-                <div class="info-label">Format</div>
-                <div class="info-value">Free Webinar</div>
+                <div class="ev-label">Cost</div>
+                <div class="ev-value">It's Free!</div>
             </div>
         </div>
     </div>
 
-    <!-- Logo footer -->
+    <!-- Footer -->
     <div class="footer-zone">
         <div class="logo-row">
             <img src="../../images/cbhn-white.png" alt="CBHN" />
@@ -856,55 +874,61 @@
     <span class="graphic-label-size">1080 × 1350 px, IG · FB · LinkedIn (vertical)</span>
 </div>
 <div class="card card-2">
-    <!-- Top gradient hero -->
-    <div class="top-gradient">
-        <div class="shape-1"></div>
-        <div class="shape-2"></div>
-        <div class="shape-3"></div>
-        <div class="diag-stripe"></div>
+    <!-- Full-bleed image + overlay -->
+    <div class="bg-photo"></div>
+    <div class="bg-overlay"></div>
 
+    <!-- Rainbow top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Header + title hero (sits over image) -->
+    <div class="top-gradient">
         <div class="top-row">
             <img src="../../images/cbhn-white.png" alt="CBHN" />
             <div class="top-pill">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z" /></svg>
-                Free Virtual Webinar
+                Join Us, It's Free
             </div>
-        </div>
-
-        <div class="title-area">
-            <div class="forum-tag">CBHN Health Equity Forum</div>
-            <h2>Navigating HR1:<br>What's Changing,<br>What's Next, and<br>How to Stay Covered</h2>
         </div>
     </div>
 
-    <!-- Content area -->
+    <!-- Spacer lets image breathe in the middle -->
+    <div class="hero-spacer"></div>
+
+    <!-- Title block centered over image -->
+    <div class="title-area">
+        <div class="forum-tag">CBHN is bringing this conversation to you</div>
+        <h2>Navigating HR1:<br>What's Changing,<br>What's Next &amp;<br>How to Stay Covered</h2>
+        <div class="title-rule"></div>
+    </div>
+
+    <!-- Content area, glass chips + CTA over dark lower portion -->
     <div class="content-area">
-        <p class="desc-text">Join the California Black Health Network for a live, interactive discussion on the impact of HR1 on healthcare access, affordability, and coverage for Black Californians and vulnerable communities.</p>
+        <p class="desc-text">A real, honest conversation about what HR1 means for your family. Get the facts, ask your questions, and leave ready to advocate for your health.</p>
 
         <div class="detail-row">
             <div class="detail-chip">
                 <div class="chip-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
                 </div>
-                <span class="chip-text">March 26, 2026 · 12:00 – 1:00 PM Pacific</span>
+                <span class="chip-text">Thursday, March 26 &middot; 12-1 PM Pacific</span>
             </div>
             <div class="detail-chip">
                 <div class="chip-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" /></svg>
                 </div>
-                <span class="chip-text">Speaker: Dr. Monica Soni, CMO, Covered California</span>
+                <span class="chip-text">Dr. Monica Soni is joining us! - CMO, Covered California</span>
             </div>
             <div class="detail-chip">
                 <div class="chip-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" /></svg>
                 </div>
-                <span class="chip-text">Free Admission · Interactive Q&amp;A</span>
+                <span class="chip-text">Free to attend &middot; Bring your questions!</span>
             </div>
         </div>
 
         <div class="cta-row">
-            <a class="cta-btn" href="https://us06web.zoom.us/webinar/register/WN_Zh6EMM_TRfqyPZIKiPHO6g">Save Your Seat, Register Free →</a>
-            <span class="cta-sub">Registration required</span>
+            <a class="cta-btn" href="https://us06web.zoom.us/webinar/register/WN_Zh6EMM_TRfqyPZIKiPHO6g">Grab Your Seat Before it&rsquo;s Full! &rarr;</a>
         </div>
     </div>
 
@@ -940,10 +964,10 @@
 
         <div class="pill">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" /></svg>
-            Health Equity Forum
+            You're Invited
         </div>
 
-        <div class="pre-title">HR1, One Big Beautiful Bill Act</div>
+        <div class="pre-title">HR1 is here. Let's talk about what it means for us.</div>
 
         <div class="main-title">
             <span class="w1">What's Changing<br>in </span><span class="w2">2026–2027?</span>
@@ -953,19 +977,19 @@
         <div class="bullets">
             <div class="bullet">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#ff5a1f"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" /></svg>
-                <span>Healthcare Costs</span>
+                <span>Your Costs</span>
             </div>
             <div class="bullet">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#36c98a"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
-                <span>Coverage Rules</span>
+                <span>Your Coverage</span>
             </div>
             <div class="bullet">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#ffd600"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" /></svg>
-                <span>Medicaid Shifts</span>
+                <span>Medicaid & Medi-Cal</span>
             </div>
             <div class="bullet">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#fc0367"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" /></svg>
-                <span>Black Californians</span>
+                <span>Our Community</span>
             </div>
         </div>
 
@@ -983,11 +1007,11 @@
             <div class="ds-sep"></div>
             <div class="ds-item">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" /></svg>
-                <span>Free</span>
+                <span>100% Free</span>
             </div>
         </div>
 
-        <a class="cta-btn" href="https://us06web.zoom.us/webinar/register/WN_Zh6EMM_TRfqyPZIKiPHO6g">Get Informed, Register Free →</a>
+        <a class="cta-btn" href="https://us06web.zoom.us/webinar/register/WN_Zh6EMM_TRfqyPZIKiPHO6g">Join the Conversation, It's Free →</a>
     </div>
 
     <div class="btm-bar"></div>
@@ -1020,20 +1044,20 @@
             </div>
             <div class="urgency-pill">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" /></svg>
-                Happening Soon
+                This Thursday!
             </div>
         </div>
 
         <!-- Center content -->
         <div class="center">
             <div class="big-date">Thursday, March 26, 2026</div>
-            <div class="main-headline">Don't Miss<br>This Forum.</div>
+            <div class="main-headline">We Want<br>You There.</div>
             <div class="subtitle">Navigating HR1: What's Changing, What's Next, and How to Stay Covered</div>
-            <div class="speaker-line">Speaker: <strong>Dr. Monica Soni</strong> · Chief Medical Officer, Covered California</div>
+            <div class="speaker-line">Dr. Monica Soni is speaking with us · CMO, Covered California</div>
 
             <div class="cta-section">
-                <a class="cta-btn" href="https://us06web.zoom.us/webinar/register/WN_Zh6EMM_TRfqyPZIKiPHO6g">Register Now, It's Free</a>
-                <span class="cta-free">No cost · Registration required · Interactive Q&amp;A</span>
+                <a class="cta-btn" href="https://us06web.zoom.us/webinar/register/WN_Zh6EMM_TRfqyPZIKiPHO6g">Save My Seat, It's Free!</a>
+                <span class="cta-free">Come ready with your questions</span>
             </div>
         </div>
 
@@ -1046,12 +1070,12 @@
             <div class="bb-sep"></div>
             <div class="bb-item">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z" /></svg>
-                <span>Free Virtual Webinar</span>
+                <span>100% Free to Attend</span>
             </div>
             <div class="bb-sep"></div>
             <div class="bb-item">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" /></svg>
-                <span>Interactive Q&amp;A</span>
+                <span>Bring Your Questions!</span>
             </div>
         </div>
     </div>
