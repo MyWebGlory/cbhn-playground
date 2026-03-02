@@ -10,6 +10,11 @@ Output:  CBHN_HR1_Forum_Flyer.pdf  (repo root)
 import asyncio, os, http.server, threading, time, pathlib, io
 from playwright.async_api import async_playwright
 from PIL import Image
+from pypdf import PdfWriter, PdfReader
+from pypdf.generic import (
+    ArrayObject, DictionaryObject, FloatObject,
+    NameObject, NumberObject, TextStringObject
+)
 
 ROOT    = pathlib.Path(__file__).resolve().parent.parent
 PUBLIC  = ROOT / "public"
@@ -48,38 +53,27 @@ async def export():
 
         await page.add_style_tag(content="""
             body { padding: 0 !important; margin: 0 !important; }
+
+            /* backdrop-filter causes a blank compositing layer in headless — strip it */
             .info-cell {
                 backdrop-filter: none !important;
                 -webkit-backdrop-filter: none !important;
-                background: rgba(255, 255, 255, 0.20) !important;
-                border: 1.5px solid rgba(255, 255, 255, 0.40) !important;
+                background: rgba(160, 170, 200, 0.52) !important;
+                border: 1.5px solid rgba(200, 210, 240, 0.65) !important;
                 box-shadow: none !important;
             }
             .info-cell-value { color: #ffffff !important; }
             .info-cell-label { color: rgba(255,255,255,0.70) !important; }
             .info-cell-sub   { color: rgba(255,255,255,0.55) !important; }
-            .hero-bg-img {
-                -webkit-mask-image: none !important;
-                mask-image: none !important;
-                background:
-                    linear-gradient(to right,
-                        rgba(7,9,26,0.76) 0%, rgba(7,9,26,0.76) 35%,
-                        rgba(7,9,26,0.18) 65%, rgba(7,9,26,0.00) 100%
-                    ),
-                    url('../../images/hr1-forum-main-image.png') center 20% / cover no-repeat !important;
-                opacity: 1 !important;
-            }
-            .hero-title .t-line-3 {
-                background: none !important;
-                -webkit-background-clip: unset !important;
-                background-clip: unset !important;
-                -webkit-text-fill-color: #36c98a !important;
-                color: #36c98a !important;
-            }
+
+            /* box-shadow renders as solid rect in headless — remove it */
             .cta-btn { box-shadow: none !important; }
         """)
 
         await page.wait_for_timeout(500)
+
+        # Capture button bounding box before screenshotting
+        btn_bbox = await page.locator(".cta-btn").bounding_box()
 
         png_bytes = await page.screenshot(
             clip={"x": 0, "y": 0, "width": 794, "height": 1123},
@@ -102,6 +96,49 @@ async def export():
         OUT_PDF.unlink()
 
     img.save(str(OUT_PDF), "PDF", resolution=300, quality=98)
+
+    # Add clickable URI annotation over the CTA button
+    # Scale from viewport (794x1123) to A4 PDF points (595.28x841.89)
+    # PDF y-axis starts at bottom, so we flip
+    A4_PTS_W, A4_PTS_H = 595.28, 841.89
+    sx = A4_PTS_W / 794
+    sy = A4_PTS_H / 1123
+
+    x0 = btn_bbox["x"] * sx
+    y0 = A4_PTS_H - (btn_bbox["y"] + btn_bbox["height"]) * sy
+    x1 = (btn_bbox["x"] + btn_bbox["width"]) * sx
+    y1 = A4_PTS_H - btn_bbox["y"] * sy
+
+    reader = PdfReader(str(OUT_PDF))
+    writer = PdfWriter()
+    page_obj = reader.pages[0]
+    writer.add_page(page_obj)
+
+    # Build a /URI link annotation
+    annot = DictionaryObject({
+        NameObject("/Type"):    NameObject("/Annot"),
+        NameObject("/Subtype"): NameObject("/Link"),
+        NameObject("/Rect"):    ArrayObject([
+            FloatObject(x0), FloatObject(y0),
+            FloatObject(x1), FloatObject(y1),
+        ]),
+        NameObject("/Border"):  ArrayObject([NumberObject(0), NumberObject(0), NumberObject(0)]),
+        NameObject("/A"):       DictionaryObject({
+            NameObject("/Type"): NameObject("/Action"),
+            NameObject("/S"):    NameObject("/URI"),
+            NameObject("/URI"):  TextStringObject(
+                "https://us06web.zoom.us/webinar/register/WN_Zh6EMM_TRfqyPZIKiPHO6g"
+            ),
+        }),
+    })
+
+    if "/Annots" not in writer.pages[0]:
+        writer.pages[0][NameObject("/Annots")] = ArrayObject()
+    writer.pages[0]["/Annots"].append(writer._add_object(annot))
+
+    with open(str(OUT_PDF), "wb") as f:
+        writer.write(f)
+
     print(f"  PDF saved -> {OUT_PDF}")
 
 
