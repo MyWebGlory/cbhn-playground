@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,6 +29,42 @@
             text-transform: uppercase;
             margin-bottom: -32px;
         }
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 1080px;
+            margin-bottom: -32px;
+        }
+        .card-header .graphic-label {
+            margin-bottom: 0;
+        }
+        .export-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ffffff;
+            color: #333;
+            font-family: "Open Sans", sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            padding: 9px 18px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            transition: background 0.15s, box-shadow 0.15s;
+        }
+        .export-btn:hover {
+            background: #f0f0f0;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+        }
+        .export-btn.loading {
+            opacity: 0.6;
+            cursor: wait;
+        }
+        .export-btn svg { flex-shrink: 0; }
 
         /* === SHARED CARD SHELL === */
         .card {
@@ -159,25 +196,26 @@
             display: flex;
             align-items: center;
             gap: 14px;
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 10px;
-            padding: 22px 36px;
-            max-width: 800px;
+            background: rgba(255,255,255,0.09);
+            border: 1.5px solid rgba(255,255,255,0.18);
+            border-radius: 12px;
+            padding: 28px 44px;
+            max-width: 860px;
             text-align: center;
         }
         .g1-event-title {
-            font-size: 16px;
-            font-weight: 700;
-            letter-spacing: 0.15em;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 0.2em;
             text-transform: uppercase;
             color: #f14916;
+            margin-bottom: 8px;
         }
         .g1-event-sub {
-            font-size: 19px;
+            font-size: 28px;
             font-weight: 600;
-            color: rgba(255,255,255,0.8);
-            margin-top: 4px;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.4;
         }
         .g1-logo-area {
             position: absolute;
@@ -188,7 +226,7 @@
             justify-content: center;
             gap: 20px;
         }
-        .g1-logo { height: 40px; filter: brightness(0) invert(1); opacity: 0.6; }
+        .g1-logo { height: 52px; filter: brightness(0) invert(1); opacity: 0.6; }
         .g1-date-badge {
             font-size: 17px;
             font-weight: 800;
@@ -277,7 +315,7 @@
             z-index: 1;
             margin-bottom: 20px;
         }
-        .g2-logo { height: 54px; }
+        .g2-logo { height: 68px; }
         .g2-divider-v {
             width: 3px; height: 42px;
             background: #f14916;
@@ -442,7 +480,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            opacity: 0.04;
+            opacity: 0.09;
             background-image:
                 repeating-linear-gradient(60deg, transparent, transparent 30px, #fff 30px, #fff 31px);
         }
@@ -480,20 +518,20 @@
             z-index: 5;
             background: linear-gradient(90deg, #f14916 0%, #cc0000 25%, #f8d300 50%, #003687 75%, #369662 100%);
         }
-        .g3-logo { height: 60px; width: auto; object-fit: contain; margin-bottom: 32px; }
+        .g3-logo { height: 76px; width: auto; object-fit: contain; margin-bottom: 32px; }
         .g3-eyebrow {
-            font-size: 17px;
+            font-size: 22px;
             font-weight: 700;
             letter-spacing: 0.3em;
             text-transform: uppercase;
             color: #f14916;
-            margin-bottom: 14px;
+            margin-bottom: 18px;
         }
         .g3-question {
-            font-size: 58px;
+            font-size: 76px;
             font-weight: 800;
             color: #1a1a2e;
-            line-height: 1.15;
+            line-height: 1.1;
         }
         .g3-question em {
             color: #f14916;
@@ -627,7 +665,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            opacity: 0.05;
+            opacity: 0.09;
             background-image:
                 repeating-linear-gradient(-30deg, transparent, transparent 24px, #fff 24px, #fff 25px);
         }
@@ -736,9 +774,9 @@
                 repeating-linear-gradient(45deg, transparent, transparent 20px, #8b6914 20px, #8b6914 21px),
                 repeating-linear-gradient(-45deg, transparent, transparent 20px, #8b6914 20px, #8b6914 21px);
         }
-        .g4-logo { height: 60px; width: auto; object-fit: contain; position: relative; z-index: 1; margin-bottom: 20px; }
+        .g4-logo { height: 76px; width: auto; object-fit: contain; position: relative; z-index: 1; margin-bottom: 20px; }
         .g4-eyebrow {
-            font-size: 15px;
+            font-size: 20px;
             font-weight: 700;
             letter-spacing: 0.25em;
             text-transform: uppercase;
@@ -747,11 +785,11 @@
             z-index: 1;
         }
         .g4-title {
-            font-size: 64px;
+            font-size: 84px;
             font-weight: 800;
             color: #f14916;
             text-transform: uppercase;
-            line-height: 1.05;
+            line-height: 1.0;
             position: relative;
             z-index: 1;
             margin-top: 6px;
@@ -825,8 +863,14 @@
 <!-- ====================================================================
      GRAPHIC 1 — SPEAKER SPOTLIGHT
      ==================================================================== -->
-<div class="graphic-label">1 / Speaker Spotlight</div>
-<div class="card g1">
+<div class="card-header">
+    <div class="graphic-label">1 / Speaker Spotlight</div>
+    <button class="export-btn" onclick="exportCard('card-g1', 'cbhn-hr1-forum-speaker-spotlight')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Export PNG
+    </button>
+</div>
+<div class="card g1" id="card-g1">
     <!-- Decorative circles -->
     <div class="g1-deco-circle g1-dc1"></div>
     <div class="g1-deco-circle g1-dc2"></div>
@@ -873,8 +917,14 @@
 <!-- ====================================================================
      GRAPHIC 2 — EVENT ANNOUNCEMENT
      ==================================================================== -->
-<div class="graphic-label">2 / Event Announcement</div>
-<div class="card g2">
+<div class="card-header">
+    <div class="graphic-label">2 / Event Announcement</div>
+    <button class="export-btn" onclick="exportCard('card-g2', 'cbhn-hr1-forum-event-announcement')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Export PNG
+    </button>
+</div>
+<div class="card g2" id="card-g2">
     <!-- Stripe frame -->
     <div class="sf st1"></div><div class="sf st2"></div><div class="sf st3"></div><div class="sf st4"></div>
     <div class="sf sb1"></div><div class="sf sb2"></div><div class="sf sb3"></div><div class="sf sb4"></div>
@@ -930,8 +980,14 @@
 <!-- ====================================================================
      GRAPHIC 3 — TEASER
      ==================================================================== -->
-<div class="graphic-label">3 / Teaser</div>
-<div class="card g3">
+<div class="card-header">
+    <div class="graphic-label">3 / Teaser</div>
+    <button class="export-btn" onclick="exportCard('card-g3', 'cbhn-hr1-forum-teaser')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Export PNG
+    </button>
+</div>
+<div class="card g3" id="card-g3">
     <div class="g3-top-bar"></div>
     <div class="g3-bottom-bar"></div>
 
@@ -944,9 +1000,8 @@
         <img src="../../images/cbhn-logo.png" alt="CBHN" class="g3-logo">
         <div class="g3-eyebrow">CBHN Health Equity Forum</div>
         <div class="g3-question">
-            How Will <em>HR1</em><br>
-            Affect Your<br>
-            Healthcare?
+            How Will <em>HR1</em>
+            Affect Your Healthcare?
         </div>
         <div class="g3-rule"></div>
         <div class="g3-topics">
@@ -972,8 +1027,14 @@
 <!-- ====================================================================
      GRAPHIC 4 — FINAL REMINDER
      ==================================================================== -->
-<div class="graphic-label">4 / Final Reminder</div>
-<div class="card g4">
+<div class="card-header">
+    <div class="graphic-label">4 / Final Reminder</div>
+    <button class="export-btn" onclick="exportCard('card-g4', 'cbhn-hr1-forum-final-reminder')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Export PNG
+    </button>
+</div>
+<div class="card g4" id="card-g4">
     <div class="g4-bottom-bar"></div>
 
     <!-- Left orange urgency panel -->
@@ -1010,4 +1071,44 @@
 </div>
 
 </body>
+
+<script>
+async function exportCard(cardId, filename) {
+    const card = document.getElementById(cardId);
+    const btn = card.previousElementSibling.querySelector('.export-btn');
+
+    btn.classList.add('loading');
+    btn.textContent = 'Exporting…';
+
+    try {
+        const canvas = await html2canvas(card, {
+            scale: 1,
+            useCORS: true,
+            allowTaint: false,
+            width: 1080,
+            height: 1350,
+            scrollX: 0,
+            scrollY: 0,
+            backgroundColor: null,
+            logging: false
+        });
+
+        canvas.toBlob(blob => {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename + '.png';
+            a.click();
+            URL.revokeObjectURL(url);
+        }, 'image/png');
+    } catch (err) {
+        console.error('Export failed:', err);
+        alert('Export failed. See console for details.');
+    } finally {
+        btn.classList.remove('loading');
+        btn.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Export PNG`;
+    }
+}
+</script>
+
 </html>
