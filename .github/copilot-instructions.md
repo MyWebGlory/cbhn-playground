@@ -280,3 +280,320 @@ Static project pages are **print/export artifacts**, not responsive web pages. T
 - Uses Playwright + Chromium, targets `http://localhost:8000` (Python HTTP server from `public/`)
 - Exports with `format='A4'`, zero margins, `print_background=True`, `prefer_css_page_size=True`
 - Run from the `public/` directory so relative paths resolve correctly
+
+Perfect. I’m going to break this down like a proper brand audit — not just “colors and fonts,” but positioning, hierarchy, visual psychology, and system logic.
+
+You’re not just recreating flyers. You’re designing inside a visual system.
+
+---
+
+# 1️⃣ Overall Brand Positioning
+
+CBHN branding communicates:
+
+• Community-centered
+• Culturally rooted
+• Educational and policy-aware
+• Trust-building
+• Professional but not corporate
+• Advocacy-driven
+
+It sits between:
+
+* Nonprofit activism
+* Public health authority
+* Cultural celebration
+
+It is NOT:
+
+* Minimal tech startup
+* Ultra-corporate healthcare
+* Luxury branding
+* Hyper-modern design system
+
+It feels community-grounded and mission-driven.
+
+---
+
+# 2️⃣ Core Visual Identity Elements
+
+## 🎨 Color System
+
+Primary Colors:
+
+* Burnt Orange (dominant headline color)
+* Deep Navy / Dark Blue
+* Black
+* White
+
+Secondary:
+
+* Green
+* Red
+* Yellow
+
+Accent Background:
+
+* Afrocentric brush stroke pattern (green/red/yellow/blue mix)
+
+Important:
+Orange is the anchor color for headlines and calls to action.
+Blue is used for authority elements and speaker panels.
+Red/Green/Yellow appear in background strokes for cultural tone.
+
+The palette is culturally expressive but controlled.
+
+It avoids:
+
+* Pastels
+* Neon
+* Gradient-heavy modern branding
+* Muted minimalist palettes
+
+---
+
+# 3️⃣ Typography Style
+
+Headline Font:
+Bold, uppercase, geometric sans-serif.
+Strong, condensed or slightly heavy weight.
+Feels public-health and authoritative.
+
+Subhead:
+Clean sans-serif.
+Sometimes italicized for emphasis.
+
+Body:
+Simple, readable sans-serif.
+Accessible, nonprofit-style clarity.
+
+They prioritize:
+
+* Legibility
+* Hierarchy
+* Accessibility
+* Strong contrast
+
+No decorative fonts.
+No script fonts.
+No playful typography.
+
+---
+
+# 4️⃣ Layout System
+
+This is key.
+
+They consistently use:
+
+White central content panel
+Over colorful brush-stroke background
+
+This creates:
+
+* Clean readability
+* Cultural vibrancy without chaos
+* Strong frame structure
+
+Common Layout Structure:
+
+Top:
+Logo + divider line
+
+Middle:
+Event Title (big, orange)
+Subheadline (dark blue)
+Speaker block
+
+Bottom:
+Date (large red or orange)
+Time (green or blue)
+Registration link
+Website
+Divider line
+
+They rely heavily on:
+Horizontal dividers (thin orange lines)
+Boxed speaker sections
+Circular headshots
+Clear spacing blocks
+
+Very structured.
+Very rectangular.
+Very grid-based.
+
+---
+
+# 5️⃣ Imagery Style
+
+Speaker Photos:
+
+* Professional headshots
+* Circular crops (very consistent)
+* Blue or orange framed background
+
+Never:
+
+* Artistic portraits
+* Dramatic lighting
+* Lifestyle photography
+* Over-stylized edits
+
+Logos:
+Partner logos placed bottom right or bottom center.
+Respectfully spaced.
+Not oversized.
+
+---
+
+# 6️⃣ Messaging Tone
+
+Tone is:
+
+• Informative
+• Educational
+• Direct
+• Community-oriented
+• Policy-aware
+• Slightly formal
+
+They avoid:
+
+* Hype language
+* Marketing fluff
+* Emotional manipulation
+* Aggressive CTA tactics
+
+Even the CTAs are:
+“Register at…”
+“Join us…”
+“Learn more…”
+
+Very nonprofit, not conversion-optimized.
+
+---
+
+# 7️⃣ Repeating Structural Patterns
+
+Across all 3 designs:
+
+✅ Big bold orange headline
+✅ Circular speaker photo
+✅ Clear date in large red/orange
+✅ Time in contrasting color
+✅ Thin orange divider lines
+✅ Website clearly displayed
+✅ Afro brush stroke background
+✅ White content block
+
+This is a system.
+
+It’s not random design.
+
+---
+
+# 8️⃣ Visual Personality
+
+If I describe the brand in 5 words:
+
+Grounded
+Community-rooted
+Culturally expressive
+Institutional
+Educational
+
+It’s not trendy.
+It’s not sleek.
+It’s not modern-tech.
+
+It’s trustworthy nonprofit public health with cultural identity.
+
+---
+
+# 9️⃣ What Makes It Feel “CBHN”
+
+These are the non-negotiables:
+
+1. The Afro brush stroke border background
+2. The burnt orange headline
+3. The white central content panel
+4. Circular speaker photos
+5. Horizontal orange divider lines
+6. Bold uppercase event title
+7. Clear structured information blocks
+
+Remove these, and it no longer feels CBHN.
+
+---
+
+# 🔟 Design Limitations of the Brand
+
+Now the real insight.
+
+The brand is:
+
+• Slightly dated visually
+• Very static
+• Not motion-native
+• Not digital-first optimized
+• Heavy on text
+• Very PDF-era design
+
+It works for:
+Email blasts
+Website posts
+Community newsletters
+
+It does NOT feel:
+Social-native
+High-end
+Conference-premium
+Policy-summit modern
+
+Which is why when you made the newer forum design, you felt like it was too similar — because their system is rigid.
+
+---
+
+# 🎯 Strategic Insight For You
+
+If you redesign for them:
+
+You have two possible directions:
+
+Option A – Stay Inside Their System
+Modernize spacing, improve hierarchy, simplify text, but keep:
+
+* Brush background
+* Orange headlines
+* Circular portraits
+* White content block
+
+Option B – Elevate the Brand
+Move toward:
+
+* More modern grid
+* Less text density
+* Cleaner composition
+* Slightly more premium nonprofit aesthetic
+* Still culturally rooted, but more refined
+
+They are currently at:
+Community Nonprofit Level
+
+You could elevate them toward:
+Policy Leadership Organization Level
+
+---
+
+# Final Brand Summary
+
+CBHN Brand DNA:
+
+A culturally grounded public health nonprofit brand that combines bold orange headline authority, Afrocentric visual motifs, structured grid layouts, and clear informational hierarchy to communicate educational events in a trustworthy, community-centered tone.
+
+It is structured, consistent, accessible, and mission-driven — but visually conservative and slightly dated.
+
+---
+
+If you want next:
+I can build you a CBHN brand guideline sheet (colors, spacing, hierarchy system) so you can design future events 2x faster without reinventing it every time.
