@@ -54,20 +54,13 @@ async def export():
         await page.add_style_tag(content="""
             body { padding: 0 !important; margin: 0 !important; }
 
-            /* backdrop-filter causes a blank compositing layer in headless — strip it */
-            .info-cell {
-                backdrop-filter: none !important;
-                -webkit-backdrop-filter: none !important;
-                background: rgba(160, 170, 200, 0.52) !important;
-                border: 1.5px solid rgba(200, 210, 240, 0.65) !important;
-                box-shadow: none !important;
-            }
-            .info-cell-value { color: #ffffff !important; }
-            .info-cell-label { color: rgba(255,255,255,0.70) !important; }
-            .info-cell-sub   { color: rgba(255,255,255,0.55) !important; }
-
-            /* box-shadow renders as solid rect in headless — remove it */
-            .cta-btn { box-shadow: none !important; }
+            /* box-shadow can render as a solid filled rectangle in headless Chromium —
+               strip all of them so they don't paint opaque blocks over content */
+            .content              { box-shadow: none !important; }
+            .sub-pill             { box-shadow: none !important; }
+            .speaker-photo-ring   { box-shadow: none !important; }
+            .cta-btn              { box-shadow: none !important; }
+            .topic-item           { box-shadow: none !important; }
         """)
 
         await page.wait_for_timeout(500)

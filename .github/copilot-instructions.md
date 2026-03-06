@@ -281,7 +281,7 @@ Static project pages are **print/export artifacts**, not responsive web pages. T
 - Exports with `format='A4'`, zero margins, `print_background=True`, `prefer_css_page_size=True`
 - Run from the `public/` directory so relative paths resolve correctly
 
-Perfect. I’m going to break this down like a proper brand audit — not just “colors and fonts,” but positioning, hierarchy, visual psychology, and system logic.
+Perfect. I’m going to break this down like a proper brand audit, not just “colors and fonts,” but positioning, hierarchy, visual psychology, and system logic.
 
 You’re not just recreating flyers. You’re designing inside a visual system.
 
@@ -550,7 +550,7 @@ High-end
 Conference-premium
 Policy-summit modern
 
-Which is why when you made the newer forum design, you felt like it was too similar — because their system is rigid.
+Which is why when you made the newer forum design, you felt like it was too similar, because their system is rigid.
 
 ---
 
@@ -591,7 +591,7 @@ CBHN Brand DNA:
 
 A culturally grounded public health nonprofit brand that combines bold orange headline authority, Afrocentric visual motifs, structured grid layouts, and clear informational hierarchy to communicate educational events in a trustworthy, community-centered tone.
 
-It is structured, consistent, accessible, and mission-driven — but visually conservative and slightly dated.
+It is structured, consistent, accessible, and mission-driven, but visually conservative and slightly dated.
 
 ---
 
