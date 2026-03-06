@@ -3,21 +3,21 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
-  base: '/cbhn-playground/',
+  base: '/',
   plugins: [
     react(),
     {
       name: 'spa-fallback',
       configureServer(server) {
         server.middlewares.use((req, _res, next) => {
-          // Intercept /cbhn-playground/projects/:slug (no file extension) and
+          // Intercept /projects/:slug (no file extension) and
           // let Vite serve the SPA index.html so React Router handles the route.
           if (
             req.url &&
             req.url.match(/\/projects\/[^/]+\/?$/) &&
             !req.url.endsWith('.html')
           ) {
-            req.url = '/cbhn-playground/'
+            req.url = '/'
           }
           next()
         })

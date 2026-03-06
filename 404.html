@@ -3,11 +3,10 @@
   <head>
     <script>
       // GitHub Pages SPA fix: preserve the original path and pass it to React Router via ?redirect
-      var base = '/cbhn-playground';
-      var path = window.location.pathname.replace(base, '') || '/';
+      var path = window.location.pathname || '/';
       var search = window.location.search || '';
       var hash = window.location.hash || '';
-      window.location.replace(base + '/?redirect=' + encodeURIComponent(path + search + hash));
+      window.location.replace('/?redirect=' + encodeURIComponent(path + search + hash));
     </script>
   </head>
   <body>
